@@ -1,0 +1,26 @@
+<div id="middle">
+	<div class="post">
+		<div class="postheader"><h1>Site Map</h1></div>
+		<div class="postcontent">
+			<table cellpadding="20" cellspacing="20" style="height: 100px; text-align: center; font-size: x-large;">
+				<tr>
+					<th><%= link_to "Home", :action => 'index' %></th>
+					<th><a href="Login.html">Login</a></th>
+					<th><a href="Register.html">Register</a></th>
+					<th><a href="Create_survey.html">Create Survey</a></th>
+					<th><%= link_to "Contacts", :action => 'contacts' %></th>
+					<th><%= link_to "Site Map", :action => 'sitemap' %></th>
+				</tr>
+				<tr>
+					<th></th>
+					<th><a href="account.html">My Account</a></th>
+					<th></th>
+					<th><a>Help</a></th>
+					<th></th>
+					<th></th>
+				</tr>
+			</table>
+		</div>
+		<div class="postfooter"></div>
+	</div>
+</div>

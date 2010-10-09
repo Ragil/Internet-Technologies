@@ -1,0 +1,37 @@
+<div id="middle">
+	<div class="post">
+		<div class="postheader"><h1>Create Survey</h1></div>
+		<div class="postcontent">
+			<form action="" method="post" onsubmit="return surveyValidate(this)">
+				<table class="form" style="margin: auto; width: 440px; text-align: left; border-width: 10px">
+					<tr>
+						<th id="usernamelabel"><p>User Name</p></th>
+						<th class="formcontent"><input name="Name" type="text" />
+							<%= link_to 'Help"</th>
+					</tr>
+					<tr>
+						<th id="titlelabel"><p>Title</p></th>
+						<th class="formcontent"><input name="Title" type="text" /></th>
+					</tr>
+					<tr>
+						<th id="questionlabel"><p>Question</p> </th>
+						<th class="formcontent">
+							<textarea name="Question" rows="3" cols ="30" style="width: 300px"></textarea></th>
+					</tr>
+					<tr>
+						<th id="answerlabel"><p>Answer Choices? (one answer per line)</p></th>
+						<th>
+							<textarea name="AnswerChoice" rows="10" cols ="30" style="width: 300px"></textarea></th>
+					</tr>
+						<tr>
+						<th></th>
+						<th style="text-align: center;">
+						<input name="ResetSurveyForm" type="reset" value="Reset Form" />
+						<input name="CreateSurvey" type="submit" value="Create Survey" /></th>
+					</tr>
+				</table>
+			</form>
+		</div>
+		<div class="postfooter"></div>
+	</div>
+</div>

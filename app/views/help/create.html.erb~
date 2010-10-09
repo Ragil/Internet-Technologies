@@ -1,0 +1,45 @@
+<div id="middle">
+	<div class="post">
+		<div class="postheader"><h1>Help</h1></div>
+		<div class="postcontent">
+			<table style="width: 700px; text-align: left; " cellpadding="8">
+				<tr style="text-align:left;">
+					<th style="" valign="top"><p>User Name </p></th>
+					<th><p>Enter your registered user name.</p></th>
+				</tr>
+				<tr style="text-align:left;">
+					<th style="" valign="top"><p>Title</p></th>
+					<th><p>Enter the title you wish to use for the survey.
+					<br />Eg:
+					<br />Breakfast For Champions?</p></th>
+				</tr>
+				<tr style="text-align:left;">
+					<th style="" valign="top"><p>Question</p></th>
+					<th><p>Enter the question you want to ask. <br />
+					Eg: <br />
+					What do you like for breakfast?</p></th>
+				</tr>
+				<tr style="text-align:left;">
+					<th style="" valign="top"><p>Answer Choices</p></th>
+					<th><p>Enter the options you wish to make available for your target 
+					audience.
+					<br />
+					Answers are entered as seperate lines. <br />
+					Eg: <br />
+					I like eggs. <br />
+					I like bacon. <br />
+					I like bacon and eggs. <br />
+					<br />
+					The above will result in three options:</p>
+					<ul style="color:red;">
+						<li><p>I like eggs.</p></li>
+						<li><p>I like bacon.</p></li>
+						<li><p>I like bacon and eggs</p>.</li>
+					</ul>
+					</th>
+				</tr>
+			</table>
+		</div>
+		<div class="postfooter"></div>
+	</div>
+</div>

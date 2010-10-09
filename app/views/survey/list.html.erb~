@@ -1,0 +1,18 @@
+<div id="middle">
+<div class="post">
+<div class="postheader"><h1>List Survey</h1></div>
+<div class="postcontent">
+<form action="" method="post" onsubmit="return checkforempty(this.searchtext)">
+<table>
+<tr>
+<th><input name="searchtext" type="text" style="width:300px" /></th>
+<th><input name="searchbutton" type="submit" value="search" /></th>
+</tr>
+</table>
+</form>
+<p>STUFF WILL BE DYNAMICALLY GENERATED HERE LATER<br/>
+at least that we hope it will do...</p>
+</div>
+<div class="postfooter"></div>
+</div>
+</div>

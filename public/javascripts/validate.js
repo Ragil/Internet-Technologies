@@ -1,0 +1,166 @@
+﻿function validate(form)
+{
+	var password1=form.Password1.value;
+	var password2=form.Password2.value;
+	var sentence=form.email.value;
+	var empty = "";
+	var string = form.name.value;
+	
+	if(string == empty){
+		alert ( "Please enter a Username." );
+  		form.name.focus();
+ 		return false;
+ 	}
+ 	
+ 	if (sentence.indexOf("@") ==-1){
+		alert("Please enter a valid email address")
+		form.email.focus();
+		return false;
+	}
+	
+	if (password1.length < 6)	{
+		alert("Password must be longer than 6 characters");
+		form.Password1.focus();
+		return false;
+	}
+	
+	if(password1 != password2){
+		valid = false;
+		alert("The password you entered does not match, Please enter password again")
+		form.Password1.focus();
+		return false;
+	}
+	return true;
+}
+
+function surveyValidate(form)
+{
+	var name = form.Name.value;
+	var title = form.Title.value;
+	var question = form.Question.value;
+	var answers = form.AnswerChoice.value;
+		
+	if (name == "")	{
+		document.getElementById("usernamelabel").style.color = "red";	
+		form.Name.focus();
+		return false;
+	} else	{
+		document.getElementById("usernamelabel").style.color = "black";	
+	}
+	
+	if (title == "")	{
+		document.getElementById("titlelabel").style.color = "red";
+		form.Title.focus();
+		return false;
+	} else	{
+		document.getElementById("titlelabel").style.color = "black";	
+	}
+
+	
+	if (question == "")	{
+		document.getElementById("questionlabel").style.color = "red";
+		form.Question.focus();
+		return false;
+	} else	{
+		document.getElementById("questionlabel").style.color = "black";	
+	}
+
+	
+	if (answers == "")	{
+		document.getElementById("answerlabel").style.color = "red";
+		form.AnswerChoice.focus();
+		return false;
+	} else	{
+		document.getElementById("answerlabel").style.color = "black";	
+	}
+
+	return true;
+}
+
+function checkPassStrength(password)
+{
+
+	var numbers = "0123456789";
+	var lower = "abcdefghijklmnopqrstuvwxyz";
+	var upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	
+	var count = 0;
+	if (contains(numbers,password))	{
+		count ++;
+	}
+	
+	if (contains(lower, password))	{
+		count++;
+	}
+
+	if (contains(upper , password))	{
+		count++;
+	}
+			
+	var colour = "red";
+	
+	if (count == 2)	{
+		colour = "orange";
+	}
+	
+	if (count == 3)	{
+		colour = "green";
+	}		
+	var strengthBar = document.getElementById("strengthbar");
+	strengthBar.style.background= colour;
+	
+	var w = password.length / 6;
+	if (w > 1)	{
+		w = 1;
+	}
+	
+	strengthBar.style.width = (w*100) + "%";	
+}
+
+function contains(text, pass)
+{
+	for (i = 0; i < pass.length; i++)	{
+		var char = pass.charAt(i);
+		if (text.indexOf(char) > -1)	{
+			return true;
+		}
+	}
+	
+	return false;
+}
+
+function validateLoginDetails(form)
+{
+
+	var password = form.Password.value;
+	var username = form.Name.value;
+	
+	var retVal = true;
+	
+	if (password == "")	{
+		var passlabel = document.getElementById("passwordlabel");
+		passlabel.style.color = "red";
+		form.Password.focus();
+		retVal = false;
+	} else	{
+		var passlabel = document.getElementById("passwordlabel");
+		passlabel.style.color = "black";
+	}
+	
+	if (username == "")	{
+		var namelabel = document.getElementById("usernamelabel");
+		namelabel.style.color = "red";
+		form.Name.focus();
+		retVal = false;
+	} else	{
+		var namelabel = document.getElementById("usernamelabel");
+		namelabel.style.color = "black";
+	}
+		
+	return retVal;
+}
+
+function checkforempty(text)
+{
+	return !(text == "");
+}
