@@ -1,0 +1,44 @@
+<div id="middle">
+	<div class="post">
+		<div class="postheader"><h1>Register</h1></div>
+		<div class="postcontent">
+			<p style="text-align: center">Please fill in all the fields 
+			to create an account.</p>
+			<form action="" method="post" onsubmit="return validate(this)">
+				<table class="login" style="margin: auto; width: 600px; text-align: left; border-width: 10px;">
+					<tr>
+						<th><p>User Name</p></th>
+						<th><input id="name" name="name" type="text" /></th>
+					</tr>
+					<tr>
+						<th style="height: 30px"><p>Email</p></th>
+						<th style="height: 30px">
+							<input id="email" name="email" type="text" /></th>
+					</tr>
+					<tr>
+						<th style="height: 30px"><p>Password</p></th>
+						<th style="height: 30px">
+							<input name="Password1" onkeyup="checkPassStrength(this.value)" type="password" /></th>
+						<th><p>Strength :</p></th>
+						<th>
+							<div style="height: 10px; width: 100px; background: silver;">
+							<div id="strengthbar" style="height: 10px; width: 0px; background: red;">
+							</div>
+							</div>
+						</th>
+					</tr>
+					<tr>
+						<th style="height: 30px"><p>Re-enter Password</p> </th>
+						<th style="height: 30px;">
+							<input name="Password2" type="password" /> </th>
+					</tr>
+					<tr>
+						<th></th>
+						<th><input name="Reset" type="reset" value="Reset" /><input name="account" type="submit" value="Submit" />
+						</th>
+					</tr>
+				</table>
+			</form>
+		</div>
+		<div class="postfooter"></div>
+	</div>

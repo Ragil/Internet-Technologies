@@ -1,0 +1,40 @@
+<div id="middle">
+	<div class="post">
+		<div class="postheader"><h1>Contacts</h1></div>
+		<div class="postcontent">
+			<table style="width: 450px; text-align: left; border-width: 10px">
+				<tr>
+					<th class="formcontent" style="width: 120px"><p>Dai Nguyen</p></th>
+					<th class="formcontent">
+						<table style="width: 340px; text-align: left; border-width: 10px">
+							<tr>
+								<th style="text-align: left"><p>Student Number:</p></th>
+								<th style="text-align: right"><p>10532445</p></th>
+							</tr>
+							<tr>
+								<th style="text-align: left"><p>Email:</p></th>
+								<th style="text-align: right"><p>nguyed08@student.uwa.edu.au</p></th>
+							</tr>
+						</table>
+					</th>
+				</tr>
+				<tr>
+					<th class="formcontent" style="width: 120px"><p>Ragil Prasetya</p></th>
+					<th class="formcontent">
+						<table style="width: 340px; text-align: left; border-width: 10px">
+							<tr>
+								<th style="text-align: left"><p>Student Number:</p></th>
+								<th style="text-align: right"><p>20378332</p></th>
+							</tr>
+							<tr>
+								<th style="text-align: left"><p>Email:</p></th>
+								<th style="text-align: right"><p>spam@gmail.com</p></th>
+							</tr>
+						</table>
+					</th>
+				</tr>
+			</table>
+		</div>
+		<div class="postfooter"></div>
+	</div>
+</div>

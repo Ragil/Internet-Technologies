@@ -1,0 +1,26 @@
+<div id="middle">
+	<div class="post">
+		<div class="postheader"><h1>My Account</h1></div>
+		<div class="postcontent">
+			<div>
+				<form action="Login.html">
+					<hr />
+					<table style="width:400px;">
+						<tr>
+							<th style="height: 30px"><p>Name:</p></th>
+							<th style="width: 233px; text-align: right; height: 30px;"><p>Anonymous</p></th>
+							<th><input name="logoutbutton" type="submit" value="Logout"/></th>
+						</tr>
+						<tr>
+							<th><p>Email:</p></th>
+							<th style="width: 233px; text-align: right"><p>anon@gmail.com</p></th>
+							<th style="text-align:right"><input type="button" name="changedetails" value="Change Details" /></th>
+						</tr>
+					</table>
+					<p>Survey's created by you:</p>
+				</form>
+			</div>
+		</div>
+		<div class="postfooter"></div>
+	</div>
+</div>

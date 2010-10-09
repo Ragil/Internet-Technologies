@@ -1,0 +1,27 @@
+<div id="middle">
+	<div class="post">
+		<div class="postheader"><h1>Login</h1></div>
+		<div class="postcontent">
+			<p style="text-align:center">Please login in with your username and password.</p>
+			<div>
+				<form action="account.html" method="post" onsubmit="return validateLoginDetails(this)">
+					<table class="login" style="">
+						<tr>
+							<th id="usernamelabel" style="width: 108px"><p>User Name</p></th>
+							<th><input name="Name" type="text" /></th>
+						</tr>
+						<tr>
+							<th id="passwordlabel" style="height: 30px; width: 108px;"><p>Password</p> </th>
+							<th style="height: 30px"><input name="Password" type="password" /></th>
+						</tr>
+						<tr>
+							<th style="width: 108px"></th>
+							<th><input name="Login" type="submit" value="Login" /> </th>
+						</tr>
+					</table>
+				</form>
+			</div>
+		</div>
+		<div class="postfooter"></div>
+	</div>
+</div>
