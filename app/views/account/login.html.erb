@@ -2,21 +2,24 @@
 	<div class="post">
 		<div class="postheader"><h1>Login</h1></div>
 		<div class="postcontent">
-			<p style="text-align:center">Please login in with your username and password.</p>
+			<p style="text-align:center">
+			<%=h @welcomemgs %>
+			</p>
 			<div>
-				<form action="account.html" method="post" onsubmit="return validateLoginDetails(this)">
+				<form action="/account/authenticate" method="post" onsubmit="return validateLoginDetails(this)">
+					<input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" />
 					<table class="login" style="">
 						<tr>
 							<th id="usernamelabel" style="width: 108px"><p>User Name</p></th>
-							<th><input name="Name" type="text" /></th>
+							<th><input name="userform[username]" type="text" /></th>
 						</tr>
 						<tr>
 							<th id="passwordlabel" style="height: 30px; width: 108px;"><p>Password</p> </th>
-							<th style="height: 30px"><input name="Password" type="password" /></th>
+							<th style="height: 30px"><input name="userform[password]" type="password" /></th>
 						</tr>
 						<tr>
 							<th style="width: 108px"></th>
-							<th><input name="Login" type="submit" value="Login" /> </th>
+							<th><input type="submit" value="Login" /> </th>
 						</tr>
 					</table>
 				</form>

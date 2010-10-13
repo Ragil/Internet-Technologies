@@ -4,21 +4,17 @@
 		<div class="postcontent">
 			<p style="text-align: center">Please fill in all the fields 
 			to create an account.</p>
-			<form action="" method="post" onsubmit="return validate(this)">
+			<form action="/account/register" method="post" onsubmit="return validate(this)">
+				<input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" />
 				<table class="login" style="margin: auto; width: 600px; text-align: left; border-width: 10px;">
 					<tr>
 						<th><p>User Name</p></th>
-						<th><input id="name" name="name" type="text" /></th>
-					</tr>
-					<tr>
-						<th style="height: 30px"><p>Email</p></th>
-						<th style="height: 30px">
-							<input id="email" name="email" type="text" /></th>
+						<th><input id="name" name="userform[username]" type="text" /></th>
 					</tr>
 					<tr>
 						<th style="height: 30px"><p>Password</p></th>
 						<th style="height: 30px">
-							<input name="Password1" onkeyup="checkPassStrength(this.value)" type="password" /></th>
+							<input id="Password1" name="userform[password]" onkeyup="checkPassStrength(this.value)" type="password" /></th>
 						<th><p>Strength :</p></th>
 						<th>
 							<div style="height: 10px; width: 100px; background: silver;">
@@ -33,8 +29,15 @@
 							<input name="Password2" type="password" /> </th>
 					</tr>
 					<tr>
+						<th style="height: 30px"><p>Email</p></th>
+						<th style="height: 30px">
+							<input id="email" name="userform[email]" type="text" /></th>
+					</tr>
+					<tr>
 						<th></th>
-						<th><input name="Reset" type="reset" value="Reset" /><input name="account" type="submit" value="Submit" />
+						<th>
+							<input name="Reset" type="reset" value="Reset" />
+							<input name="account" type="submit" value="Submit" />
 						</th>
 					</tr>
 				</table>

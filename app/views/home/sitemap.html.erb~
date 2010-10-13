@@ -4,12 +4,13 @@
 		<div class="postcontent">
 			<table cellpadding="20" cellspacing="20" style="height: 100px; text-align: center; font-size: x-large;">
 				<tr>
-					<th><%= link_to "Home", :action => 'index' %></th>
-					<th><a href="Login.html">Login</a></th>
-					<th><a href="Register.html">Register</a></th>
-					<th><a href="Create_survey.html">Create Survey</a></th>
-					<th><%= link_to "Contacts", :action => 'contacts' %></th>
-					<th><%= link_to "Site Map", :action => 'sitemap' %></th>
+					<th><%= link_to "Home", :controller => 'home/index' %></th>
+					<th><%= link_to "Login", :controller => 'account/login' %></th>
+					<th><%= link_to "Register", :controller => 'account/register' %></th>
+					<th><%= link_to "Create Survey", :controller => 'survey/create' %></th>
+					<th><%= link_to "List Survey", :controller => 'survey/list' %></th>
+					<th><%= link_to "Contacts", :controller => 'home/contacts' %></th>
+					<th><%= link_to "Site Map", :controller => 'home/sitemap' %></th>
 				</tr>
 				<tr>
 					<th></th>

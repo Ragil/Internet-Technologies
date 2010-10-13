@@ -2,28 +2,27 @@
 	<div class="post">
 		<div class="postheader"><h1>Create Survey</h1></div>
 		<div class="postcontent">
-			<form action="/survey/validate_survey" method="post" onsubmit="return surveyValidate(this)">
+			<form action="/survey/addquestion" method="post">'
 			<input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" />
-			<input name="userform[username]" type="hidden" value="<%= session[:user_id] %>" />
+			<input name="userform[title]" type="hidden" value="<%= session[:survey_title] %>" />
 				<table class="form" style="margin: auto; width: 440px; text-align: left; border-width: 10px">
 					<tr>
-						<th id="titlelabel"><p>Title</p></th>
-						<th class="formcontent"><input name="userform[title]" type="text" />
+						<th id="titlelabel"><p>Question</p></th>
+						<th class="formcontent"><input name="userform[question]" type="text" />
 							<%= link_to 'Help', :controller => 'help/create' %>
 						</th>
 					</tr>
 					<tr>
-						<th id="questionlabel"><p>Description</p></th>
+						<th id="questionlabel"><p>Answer Choice (1 per line)</p></th>
 						<th class="formcontent">
-							<textarea name="userform[description]" rows="3" cols ="30" style="width: 300px"></textarea></th>
+							<textarea name="choice" rows="3" cols ="30" style="width: 300px"></textarea></th>
 					</tr>
 					<tr>
 						<th></th>
 						<th style="text-align: center;">
-						<input name="CreateSurvey" type="submit" value="Create Survey" /></th>
+						<input name="AddQuestion" type="submit" value="Add Question" /></th>
 					</tr>
 				</table>
-				<input name="userform[published]" type="hidden" value=0 />
 			</form>
 		</div>
 		<div class="postfooter"></div>

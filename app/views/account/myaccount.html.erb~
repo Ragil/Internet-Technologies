@@ -3,22 +3,67 @@
 		<div class="postheader"><h1>My Account</h1></div>
 		<div class="postcontent">
 			<div>
-				<form action="Login.html">
-					<hr />
-					<table style="width:400px;">
-						<tr>
-							<th style="height: 30px"><p>Name:</p></th>
-							<th style="width: 233px; text-align: right; height: 30px;"><p>Anonymous</p></th>
-							<th><input name="logoutbutton" type="submit" value="Logout"/></th>
-						</tr>
-						<tr>
-							<th><p>Email:</p></th>
-							<th style="width: 233px; text-align: right"><p>anon@gmail.com</p></th>
-							<th style="text-align:right"><input type="button" name="changedetails" value="Change Details" /></th>
-						</tr>
-					</table>
-					<p>Survey's created by you:</p>
-				</form>
+				<hr />
+				<table style="width:400px;">
+					<tr>
+						<th style="height: 30px"><p>Name:</p></th>
+						<th style="width: 233px; text-align: right; height: 30px;">
+							<p><%= session[:user_id] %></p>
+						</th>
+						<th>
+							<form action="/account/logout">
+							<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
+							<input name="logoutbutton" type="submit" value="Logout"/>'
+							</form>
+						</th>
+					</tr>
+					<tr>
+						<th><p>Email:</p></th>
+						<th style="width: 233px; text-align: right">
+							<p><%= session[:email] %></p>
+						</th>
+						<th style="text-align:left">
+							<form action="/account/update">
+							<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
+							<input name="changedetails" type="submit" value="Change Details" />
+							</form>
+						</th>
+					</tr>
+					<tr>
+						<th></th>
+						<th style="width: 233px; text-align: left">
+							<p>Surveys created by you:</p>
+						</th>
+						<th style="text-align:left">
+							<form action="/survey/create">
+							<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
+							<input name="createsurvey" type="submit" value="Create Survey" />
+							</form>
+						</th>
+					</tr>
+				</table>
+
+				<table>
+					<tr>
+						<th><p>TITLE</p></th>
+						<th><p>DESCRIPTION</p></th>
+						<th><p>USERNAME</p></th>
+					</tr>
+					<% @survey.each do |s| %>
+					<tr>
+						<th><p><%=h s.title %></p></th>
+						<th><p><%=h s.description %></p></th>
+						<th><p><%=h s.username %></p></th>
+					</tr>
+						<% @question = Choice.find(:all,:conditions => ["question_description = ?", s.description ]) %>
+						<% @question.each do |q| %>
+							<tr>
+								<th><p><%=h q.description %></p></th>
+							</tr>
+						<% end %>
+					<% end %>
+				</table>
+
 			</div>
 		</div>
 		<div class="postfooter"></div>

@@ -10,8 +10,18 @@
 				</tr>
 				</table>
 			</form>
-			<p>STUFF WILL BE DYNAMICALLY GENERATED HERE LATER<br/>
-			at least that we hope it will do...</p>
+			<table>
+					<tr>
+						<th><p>TITLE</p></th>
+						<th><p>DESCRIPTION</p></th>
+					</tr>
+					<% @survey.each do |s| %>
+					<tr>
+						<th><p><%=h s.title %></p></th>
+						<th><p><%=h s.description %></p></th>
+					</tr>
+					<% end %>
+				</table>
 		</div>
 		<div class="postfooter"></div>
 	</div>

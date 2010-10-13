@@ -51,6 +51,7 @@ class AccountController < ApplicationController
 		else
 			@user = User.find(:first,:conditions => ["username = ?", session[:user_id] ])
 			@survey = Survey.find(:all,:conditions => ["username = ?", @user.username ])
+			@questions = Survey.find(:all,:conditions => ["question_description = ?", @user.username ])
 		end
 		
 	end
