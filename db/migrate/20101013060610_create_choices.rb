@@ -1,8 +1,8 @@
 class CreateChoices < ActiveRecord::Migration
   def self.up
     create_table :choices do |t|
-			t.string:question_description
 			t.string:description
+			t.integer:question_id
       t.timestamps
     end
   end

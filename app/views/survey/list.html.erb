@@ -14,11 +14,13 @@
 					<tr>
 						<th><p>TITLE</p></th>
 						<th><p>DESCRIPTION</p></th>
+						<th><p>CREATED BY</p></th>
 					</tr>
 					<% @survey.each do |s| %>
 					<tr>
 						<th><p><%=h s.title %></p></th>
 						<th><p><%=h s.description %></p></th>
+						<th><p><%=h User.find(:first, :conditions => ["id = ?", s.user_id]).username %></p></th>
 					</tr>
 					<% end %>
 				</table>

@@ -6,7 +6,7 @@ class AccountController < ApplicationController
 			redirect_to :action => 'myaccount'
 		end
 		
-		if session[:user_id] != "derp"
+		if session[:user_id] != "ANONYMOUS"
 			@welcomemgs = "Please login in with your username and password."
 		else
 			@welcomemgs = "Incorrect Username/Password. Please check CAPSLOCK or register."
@@ -50,7 +50,6 @@ class AccountController < ApplicationController
 			redirect_to :action => 'login'
 		else
 			@user = User.find(:first,:conditions => ["username = ?", session[:user_id] ])
-			@survey = Survey.find(:all,:conditions => ["username = ?", @user.username ])
 		end
 		
 	end

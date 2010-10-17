@@ -4,7 +4,6 @@
 		<div class="postcontent">
 			<form action="/survey/validate_survey" method="post" onsubmit="return surveyValidate(this)">
 			<input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" />
-			<input name="userform[username]" type="hidden" value="<%= session[:user_id] %>" />
 				<table class="form" style="margin: auto; width: 440px; text-align: left; border-width: 10px">
 					<tr>
 						<th id="titlelabel"><p>Title</p></th>

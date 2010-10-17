@@ -47,20 +47,38 @@
 					<tr>
 						<th><p>TITLE</p></th>
 						<th><p>DESCRIPTION</p></th>
-						<th><p>USERNAME</p></th>
+						<th><p>PUBLISHED</p></th>
 					</tr>
-					<% @survey.each do |s| %>
+					<% @user.surveys.each do |s| %>
 					<tr>
 						<th><p><%=h s.title %></p></th>
 						<th><p><%=h s.description %></p></th>
-						<th><p><%=h s.username %></p></th>
-					</tr>
-						<% @question = Choice.find(:all,:conditions => ["question_description = ?", s.description ]) %>
-						<% @question.each do |q| %>
-							<tr>
-								<th><p><%=h q.description %></p></th>
-							</tr>
+						<th>
+							<p>
+								<% if s.published == 1 %>
+									Yes
+								<% else %>
+									No
+								<% end %>
+							</p>
+						</th>
+						<th>
+							<form action="/survey/view">
+							<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
+							<input type="hidden" name="survey_title" value="<%= s.title %>" />
+							<input name="<%= s.title %>" type="submit" value="view" />
+							</form>
+						</th>
+						<% if s.published == 0 %>
+						<th>
+							<form action="/survey/publish">
+							<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
+							<input type="hidden" name="survey_title" value="<%= s.title %>" />
+							<input name="<%= s.title %>" type="submit" value="publish" />
+							</form>
+						</th>
 						<% end %>
+					</tr>
 					<% end %>
 				</table>
 

@@ -12,13 +12,22 @@
 			</form>
 			<table>
 					<tr>
-						<th><p>TITLE/p></th>
+						<th><p>TITLE</p></th>
 						<th><p>DESCRIPTION</p></th>
+						<th><p>CREATED BY</p></th>
 					</tr>
 					<% @survey.each do |s| %>
 					<tr>
 						<th><p><%=h s.title %></p></th>
 						<th><p><%=h s.description %></p></th>
+						<th><p><%=h User.find(:first, :conditions => ["id = ?", s.user_id]).username %></p></th>
+						<th>
+							<form action="/survey/publish">
+							<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
+							<input type="hidden" name="survey_title" value="<%= s.title %>" />
+							<input name="<%= s.title %>" type="submit" value="publish" />
+							</form>
+						</th>
 					</tr>
 					<% end %>
 				</table>

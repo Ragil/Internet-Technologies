@@ -12,37 +12,38 @@
 ActiveRecord::Schema.define(:version => 20101013061658) do
 
   create_table "answers", :force => true do |t|
-    t.string   "question"
+    t.integer  "choice_id"
+    t.integer  "question_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "choices", :force => true do |t|
-    t.string   "question_description"
     t.string   "description"
+    t.integer  "question_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "questions", :force => true do |t|
-    t.string   "title"
-    t.string   "question"
+    t.string   "description"
+    t.integer  "survey_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "surveys", :force => true do |t|
-    t.string   "username"
     t.string   "title"
     t.string   "description"
-    t.string   "published"
+    t.integer  "published"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "takens", :force => true do |t|
-    t.string   "title"
     t.string   "ip"
+    t.string   "survey_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

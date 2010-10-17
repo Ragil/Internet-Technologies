@@ -1,14 +1,13 @@
 <div id="middle">
 	<div class="post">
-		<div class="postheader"><h1>Create Survey</h1></div>
+		<div class="postheader"><h1><%= @survey.title %> -- NOT PUBLISHED</h1></div>
 		<div class="postcontent">
-			<form action="/survey/addquestion" method="post">'
+			<form action="/survey/addquestion" method="post">
 			<input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" />
-			<input name="userform[title]" type="hidden" value="<%= session[:survey_title] %>" />
 				<table class="form" style="margin: auto; width: 440px; text-align: left; border-width: 10px">
 					<tr>
 						<th id="titlelabel"><p>Question</p></th>
-						<th class="formcontent"><input name="userform[question]" type="text" />
+						<th class="formcontent"><input name="userform[description]" type="text" />
 							<%= link_to 'Help', :controller => 'help/create' %>
 						</th>
 					</tr>
@@ -24,6 +23,24 @@
 					</tr>
 				</table>
 			</form>
+			<p>======Preview======</p>
+			<p>Title = <%= @survey.title %></p>
+			<p>Description :<br /> <%= @survey.description %></p>
+			<table>
+				<% @survey.questions.each do |q| %>
+				<tr>
+					<p>
+						Q<%=@counter%> : <%=q.description%>
+						<% @counter = @counter + 1 %>
+						<br />
+						<% q.choices.each do |c| %>
+							# <%= c.description %>
+							<br />
+						<% end %>
+					</p>
+				</tr>
+				<% end %>
+			</table>
 		</div>
 		<div class="postfooter"></div>
 	</div>
