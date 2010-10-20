@@ -1,0 +1,32 @@
+<div id="middle">
+	<div class="post">
+		<div class="postheader"><h1><%= @survey.title %></h1></div>
+		<div class="postcontent">
+			<p>Description :<br /> <%= @survey.description %></p>
+<!-- 			javascript validate to make sure all questions are answered -->
+			<form action="/survey/take" method="post" >
+			<input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" />
+			<table style="width: 450px; text-align: left; border-width: 10px">
+				<% @survey.questions.each do |q| %>
+				<tr>
+					<th>
+						<p>Q<%=@counter%> : <%=h q.description%>
+						<% q.choices.each do |c| %>
+							<br />
+							<p><input name="<%=h q.description%><%=h @counter %>" type="radio" value ="<%=h c.id %>" /># <%= c.description %></p>
+						<% end %>
+						<% @counter = @counter + 1 %>
+					</th>
+				</tr>
+				<% end %>
+				<tr>
+					<th style="text-align: center">
+					<input name="takesurvey" type="submit" value="Submit" />
+					</th>
+				</tr>
+			</table>
+			</form>
+		</div>
+		<div class="postfooter"></div>
+	</div>
+</div>

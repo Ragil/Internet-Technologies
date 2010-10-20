@@ -8,5 +8,4 @@ class Question < ActiveRecord::Base
 
 	validates_presence_of :description, :message => "Description cannot be empty."
 	validates_length_of :description, :minimum => 1, :message => "Description cannot be empty."
-	validates_uniqueness_of :title, :mesage => "Survey already exists."
 end

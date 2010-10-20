@@ -4,7 +4,7 @@
 		<div class="postcontent">
 			<form action="/survey/validate_survey" method="post" onsubmit="return surveyValidate(this)">
 			<input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" />
-			<input name="userform[username]" type="hidden" value="<%= session[:user_id] %>" />
+			<input name="userform[published]" type="hidden" value=0 />
 				<table class="form" style="margin: auto; width: 440px; text-align: left; border-width: 10px">
 					<tr>
 						<th id="titlelabel"><p>Title</p></th>
@@ -20,11 +20,12 @@
 					<tr>
 						<th></th>
 						<th style="text-align: center;">
-						<input name="CreateSurvey" type="submit" value="Create Survey" /></th>
+							<input name="CreateSurvey" type="submit" value="Create Survey" />
+							</form>
+							<form><input type="button" value="Back" onClick="history.go(-1);return true;"></form>
+						</th>
 					</tr>
 				</table>
-				<input name="userform[published]" type="hidden" value=0 />
-			</form>
 		</div>
 		<div class="postfooter"></div>
 	</div>

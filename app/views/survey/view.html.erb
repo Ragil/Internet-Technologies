@@ -5,17 +5,32 @@
 			<p>Description :<br /> <%= @survey.description %></p>
 			<table>
 				<% @survey.questions.each do |q| %>
-				<tr>
-					<p>
-						Q<%=@counter%> : <%=q.description%>
-						<% @counter = @counter + 1 %>
-						<br />
-						<% q.choices.each do |c| %>
-							# <%= c.description %>
-							<br />
-						<% end %>
-					</p>
-				</tr>
+				<% @total = q.answers.count %>
+			
+					<tr>
+						<th><p>Q<%=@counter%> : <%=q.description%></p></th>
+						<th style="text-align: right"><p>Total # : <%=h @total %></p></th>
+					</tr>
+					
+					<% @counter = @counter + 1 %>
+					<% q.choices.each do |c| %>
+					
+					<tr>
+							<th>
+								<p><%= c.description %></p>
+							</th>
+							<th>
+								<% @selected = Answer.count(:all, :conditions => ["choice_id = ?", c.id]) %>
+								<% if @total.to_i != 0 %>
+									<% @i = @selected.to_i * 100.to_i / @total.to_i%>
+								<% else %>
+									<% @i = 0 %>
+								<% end %>
+								<p><%=h @i %> &#37;</p>
+							</th>
+					</tr>
+
+					<% end %>	
 				<% end %>
 			</table>
 		</div>

@@ -22,10 +22,10 @@
 						<th><p><%=h s.description %></p></th>
 						<th><p><%=h User.find(:first, :conditions => ["id = ?", s.user_id]).username %></p></th>
 						<th>
-							<form action="/survey/publish">
+						<form action="/survey/take">
 							<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
 							<input type="hidden" name="survey_title" value="<%= s.title %>" />
-							<input name="<%= s.title %>" type="submit" value="publish" />
+							<input name="<%= s.title %>" type="submit" value="Take Survey" />
 							</form>
 						</th>
 					</tr>

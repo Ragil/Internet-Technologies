@@ -7787,3 +7787,1335 @@ Rendering survey/view
   [4;36;1mQuestion Load (0.8ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".survey_id = 1) [0m
   [4;35;1mChoice Load (0.9ms)[0m   [0mSELECT * FROM "choices" WHERE ("choices".question_id = 1) [0m
 Completed in 124ms (View: 90, DB: 2) | 200 OK [http://0.0.0.0/survey/view?authenticity_token=68e2febb30b1218dfbeaeb83279b7f5a076bd05e&survey_title=survey+1&survey+1=view]
+
+
+Processing SurveyController#addquestion (for 127.0.0.1 at 2010-10-18 05:49:24) [GET]
+  [4;36;1mSurvey Load (0.6ms)[0m   [0;1mSELECT * FROM "surveys" WHERE (title = 'jhgoljhgkjgj') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering survey/addquestion
+  [4;35;1mQuestion Load (0.6ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".survey_id = 3) [0m
+Completed in 84ms (View: 61, DB: 1) | 200 OK [http://0.0.0.0/survey/addquestion]
+
+
+Processing AccountController#login (for 127.0.0.1 at 2010-10-18 05:49:26) [GET]
+Redirected to actionmyaccount
+Completed in 5ms (DB: 0) | 302 Found [http://0.0.0.0/account/login]
+
+
+Processing AccountController#myaccount (for 127.0.0.1 at 2010-10-18 05:49:27) [GET]
+  [4;36;1mUser Load (1.7ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = 'blahblah') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering account/myaccount
+  [4;35;1mSurvey Load (1.1ms)[0m   [0mSELECT * FROM "surveys" WHERE ("surveys".user_id = 1) [0m
+Completed in 53ms (View: 39, DB: 2) | 200 OK [http://0.0.0.0/account/myaccount]
+
+
+Processing SurveyController#view (for 127.0.0.1 at 2010-10-18 05:49:28) [GET]
+  Parameters: {"survey_title"=>"jhgoljhgkjgj", "authenticity_token"=>"f19a4d683b9e6dcedb803adaf4f04e24f928d936", "jhgoljhgkjgj"=>"view"}
+  [4;36;1mSurvey Load (1.8ms)[0m   [0;1mSELECT * FROM "surveys" WHERE (title = 'jhgoljhgkjgj') LIMIT 1[0m
+Redirected to actionaddquestion
+Completed in 21ms (DB: 2) | 302 Found [http://0.0.0.0/survey/view?authenticity_token=f19a4d683b9e6dcedb803adaf4f04e24f928d936&survey_title=jhgoljhgkjgj&jhgoljhgkjgj=view]
+
+
+Processing SurveyController#addquestion (for 127.0.0.1 at 2010-10-18 05:49:28) [GET]
+  [4;35;1mSurvey Load (0.9ms)[0m   [0mSELECT * FROM "surveys" WHERE (title = 'jhgoljhgkjgj') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering survey/addquestion
+  [4;36;1mQuestion Load (0.4ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".survey_id = 3) [0m
+Completed in 53ms (View: 25, DB: 1) | 200 OK [http://0.0.0.0/survey/addquestion]
+
+
+Processing AccountController#login (for 127.0.0.1 at 2010-10-18 05:49:30) [GET]
+Redirected to actionmyaccount
+Completed in 4ms (DB: 0) | 302 Found [http://0.0.0.0/account/login]
+
+
+Processing AccountController#myaccount (for 127.0.0.1 at 2010-10-18 05:49:30) [GET]
+  [4;35;1mUser Load (1.1ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'blahblah') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering account/myaccount
+  [4;36;1mSurvey Load (1.0ms)[0m   [0;1mSELECT * FROM "surveys" WHERE ("surveys".user_id = 1) [0m
+Completed in 112ms (View: 98, DB: 1) | 200 OK [http://0.0.0.0/account/myaccount]
+
+
+Processing SurveyController#list (for 127.0.0.1 at 2010-10-18 05:49:33) [GET]
+  [4;35;1mSurvey Load (1.3ms)[0m   [0mSELECT * FROM "surveys" WHERE (published = 1) [0m
+Rendering template within layouts/application
+Rendering survey/list
+  [4;36;1mUser Load (103.6ms)[0m   [0;1mSELECT * FROM "users" WHERE (id = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE (id = 1) LIMIT 1[0m
+Completed in 160ms (View: 146, DB: 1) | 200 OK [http://0.0.0.0/survey/list]
+
+
+Processing SurveyController#create (for 127.0.0.1 at 2010-10-18 05:49:34) [GET]
+Rendering template within layouts/application
+Rendering survey/create
+Completed in 33ms (View: 29, DB: 0) | 200 OK [http://0.0.0.0/survey/create]
+
+
+Processing SurveyController#list (for 127.0.0.1 at 2010-10-18 05:49:36) [GET]
+  [4;36;1mSurvey Load (1.4ms)[0m   [0;1mSELECT * FROM "surveys" WHERE (published = 1) [0m
+Rendering template within layouts/application
+Rendering survey/list
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" WHERE (id = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (id = 1) LIMIT 1[0m
+Completed in 55ms (View: 41, DB: 1) | 200 OK [http://0.0.0.0/survey/list]
+
+
+Processing AccountController#login (for 127.0.0.1 at 2010-10-18 05:49:46) [GET]
+Redirected to actionmyaccount
+Completed in 4ms (DB: 0) | 302 Found [http://0.0.0.0/account/login]
+
+
+Processing AccountController#myaccount (for 127.0.0.1 at 2010-10-18 05:49:46) [GET]
+  [4;35;1mUser Load (1.2ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'blahblah') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering account/myaccount
+  [4;36;1mSurvey Load (1.1ms)[0m   [0;1mSELECT * FROM "surveys" WHERE ("surveys".user_id = 1) [0m
+Completed in 54ms (View: 40, DB: 1) | 200 OK [http://0.0.0.0/account/myaccount]
+
+
+Processing AccountController#logout (for 127.0.0.1 at 2010-10-18 05:50:07) [GET]
+  Parameters: {"authenticity_token"=>"f19a4d683b9e6dcedb803adaf4f04e24f928d936", "logoutbutton"=>"Logout"}
+Redirected to actionlogin
+Completed in 113ms (DB: 0) | 302 Found [http://0.0.0.0/account/logout?authenticity_token=f19a4d683b9e6dcedb803adaf4f04e24f928d936&logoutbutton=Logout]
+
+
+Processing AccountController#login (for 127.0.0.1 at 2010-10-18 05:50:07) [GET]
+Rendering template within layouts/application
+Rendering account/login
+Completed in 24ms (View: 20, DB: 0) | 200 OK [http://0.0.0.0/account/login]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-10-19 16:51:30) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Completed in 93ms (View: 88, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing AccountController#login (for 127.0.0.1 at 2010-10-19 16:51:35) [GET]
+Rendering template within layouts/application
+Rendering account/login
+Completed in 23ms (View: 19, DB: 0) | 200 OK [http://localhost/account/login]
+
+
+Processing AccountController#authenticate (for 127.0.0.1 at 2010-10-19 16:51:41) [POST]
+  Parameters: {"authenticity_token"=>"0dbaa3922a25d670887b5aaa4142148322ed6264", "userform"=>{"username"=>"blahblah", "password"=>"blahblah"}}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = 'blahblah' and password = 'blahblah') LIMIT 1[0m
+Redirected to actionmyaccount
+Completed in 50ms (DB: 1) | 302 Found [http://localhost/account/authenticate]
+
+
+Processing AccountController#myaccount (for 127.0.0.1 at 2010-10-19 16:51:41) [GET]
+  [4;35;1mUser Load (1.6ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'blahblah') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering account/myaccount
+  [4;36;1mSurvey Load (1.2ms)[0m   [0;1mSELECT * FROM "surveys" WHERE ("surveys".user_id = 1) [0m
+Completed in 62ms (View: 45, DB: 2) | 200 OK [http://localhost/account/myaccount]
+
+
+Processing SurveyController#view (for 127.0.0.1 at 2010-10-19 16:51:43) [GET]
+  Parameters: {"survey_title"=>"rsdetujhsertyha ryha erh qerha erh ae", "rsdetujhsertyha ryha erh qerha erh ae"=>"view", "authenticity_token"=>"0dbaa3922a25d670887b5aaa4142148322ed6264"}
+  [4;35;1mSurvey Load (1.9ms)[0m   [0mSELECT * FROM "surveys" WHERE (title = 'rsdetujhsertyha ryha erh qerha erh ae') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering survey/view
+  [4;36;1mQuestion Load (0.8ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".survey_id = 2) [0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSELECT count(*) AS count_all FROM "answers" WHERE ("answers".question_id = 3) [0m
+  [4;36;1mChoice Load (1.1ms)[0m   [0;1mSELECT * FROM "choices" WHERE ("choices".question_id = 3) [0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSELECT count(*) AS count_all FROM "answers" WHERE (choice_id = 14) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM "answers" WHERE (choice_id = 15) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM "answers" WHERE (choice_id = 16) [0m
+Completed in 103ms (View: 76, DB: 2) | 200 OK [http://localhost/survey/view?authenticity_token=0dbaa3922a25d670887b5aaa4142148322ed6264&survey_title=rsdetujhsertyha+ryha+erh+qerha+erh+ae&rsdetujhsertyha+ryha+erh+qerha+erh+ae=view]
+
+
+Processing SurveyController#view (for 127.0.0.1 at 2010-10-19 16:51:48) [GET]
+  Parameters: {"survey_title"=>"l;fkjsdl;kfjklasfjlsdkajf", "l;fkjsdl;kfjklasfjlsdkajf"=>"view", "authenticity_token"=>"0dbaa3922a25d670887b5aaa4142148322ed6264"}
+  [4;36;1mSurvey Load (1.2ms)[0m   [0;1mSELECT * FROM "surveys" WHERE (title = 'l;fkjsdl;kfjklasfjlsdkajf') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering survey/view
+  [4;35;1mQuestion Load (1.0ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".survey_id = 1) [0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT count(*) AS count_all FROM "answers" WHERE ("answers".question_id = 1) [0m
+  [4;35;1mChoice Load (1.3ms)[0m   [0mSELECT * FROM "choices" WHERE ("choices".question_id = 1) [0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSELECT count(*) AS count_all FROM "answers" WHERE (choice_id = 1) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM "answers" WHERE (choice_id = 2) [0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT count(*) AS count_all FROM "answers" WHERE (choice_id = 3) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM "answers" WHERE (choice_id = 4) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "answers" WHERE (choice_id = 5) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "answers" WHERE (choice_id = 6) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "answers" WHERE ("answers".question_id = 2) [0m
+  [4;35;1mChoice Load (1.0ms)[0m   [0mSELECT * FROM "choices" WHERE ("choices".question_id = 2) [0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "answers" WHERE (choice_id = 7) [0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSELECT count(*) AS count_all FROM "answers" WHERE (choice_id = 8) [0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSELECT count(*) AS count_all FROM "answers" WHERE (choice_id = 9) [0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSELECT count(*) AS count_all FROM "answers" WHERE (choice_id = 10) [0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT count(*) AS count_all FROM "answers" WHERE (choice_id = 11) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM "answers" WHERE (choice_id = 12) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM "answers" WHERE (choice_id = 13) [0m
+Completed in 108ms (View: 87, DB: 1) | 200 OK [http://localhost/survey/view?authenticity_token=0dbaa3922a25d670887b5aaa4142148322ed6264&survey_title=l%3Bfkjsdl%3Bkfjklasfjlsdkajf&l%3Bfkjsdl%3Bkfjklasfjlsdkajf=view]
+
+
+Processing AccountController#logout (for 127.0.0.1 at 2010-10-19 16:52:23) [GET]
+  Parameters: {"authenticity_token"=>"0dbaa3922a25d670887b5aaa4142148322ed6264", "logoutbutton"=>"Logout"}
+Redirected to actionlogin
+Completed in 50ms (DB: 0) | 302 Found [http://localhost/account/logout?authenticity_token=0dbaa3922a25d670887b5aaa4142148322ed6264&logoutbutton=Logout]
+
+
+Processing AccountController#login (for 127.0.0.1 at 2010-10-19 16:52:23) [GET]
+Rendering template within layouts/application
+Rendering account/login
+Completed in 28ms (View: 24, DB: 0) | 200 OK [http://localhost/account/login]
+
+
+Processing AccountController#login (for 127.0.0.1 at 2010-10-19 16:57:23) [GET]
+Rendering template within layouts/application
+Rendering account/login
+Completed in 20ms (View: 17, DB: 0) | 200 OK [http://localhost/account/login]
+
+
+Processing AccountController#login (for 127.0.0.1 at 2010-10-19 16:57:24) [GET]
+Rendering template within layouts/application
+Rendering account/login
+Completed in 18ms (View: 15, DB: 0) | 200 OK [http://localhost/account/login]
+
+
+Processing AccountController#authenticate (for 127.0.0.1 at 2010-10-19 16:57:31) [POST]
+  Parameters: {"authenticity_token"=>"46341e0718d3a9bb6a7fbf11644dcd7f296d4887", "userform"=>{"username"=>"blahblah", "password"=>"blahblah"}}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = 'blahblah' and password = 'blahblah') LIMIT 1[0m
+Redirected to actionmyaccount
+Completed in 20ms (DB: 1) | 302 Found [http://localhost/account/authenticate]
+
+
+Processing AccountController#myaccount (for 127.0.0.1 at 2010-10-19 16:57:31) [GET]
+  [4;35;1mUser Load (1.2ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'blahblah') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering account/myaccount
+  [4;36;1mSurvey Load (1.0ms)[0m   [0;1mSELECT * FROM "surveys" WHERE ("surveys".user_id = 1) [0m
+Completed in 65ms (View: 45, DB: 1) | 200 OK [http://localhost/account/myaccount]
+
+
+Processing SurveyController#list (for 127.0.0.1 at 2010-10-19 17:02:02) [GET]
+  [4;35;1mSurvey Load (1.2ms)[0m   [0mSELECT * FROM "surveys" WHERE (published = 1) [0m
+Rendering template within layouts/application
+Rendering survey/list
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (id = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE (id = 1) LIMIT 1[0m
+Completed in 57ms (View: 42, DB: 1) | 200 OK [http://localhost/survey/list]
+
+
+Processing SurveyController#takeviewer (for 127.0.0.1 at 2010-10-19 17:02:03) [GET]
+  Parameters: {"survey_title"=>"l;fkjsdl;kfjklasfjlsdkajf", "l;fkjsdl;kfjklasfjlsdkajf"=>"Take Survey", "authenticity_token"=>"46341e0718d3a9bb6a7fbf11644dcd7f296d4887"}
+  [4;36;1mSurvey Load (1.8ms)[0m   [0;1mSELECT * FROM "surveys" WHERE (title = 'l;fkjsdl;kfjklasfjlsdkajf') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering survey/takeviewer
+  [4;35;1mQuestion Load (1.1ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".survey_id = 1) [0m
+  [4;36;1mChoice Load (4.1ms)[0m   [0;1mSELECT * FROM "choices" WHERE ("choices".question_id = 1) [0m
+  [4;35;1mChoice Load (1.5ms)[0m   [0mSELECT * FROM "choices" WHERE ("choices".question_id = 2) [0m
+Completed in 83ms (View: 67, DB: 2) | 200 OK [http://localhost/survey/takeviewer?authenticity_token=46341e0718d3a9bb6a7fbf11644dcd7f296d4887&survey_title=l%3Bfkjsdl%3Bkfjklasfjlsdkajf&l%3Bfkjsdl%3Bkfjklasfjlsdkajf=Take+Survey]
+
+
+Processing SurveyController#take (for 127.0.0.1 at 2010-10-19 17:02:09) [POST]
+  Parameters: {"authenticity_token"=>"46341e0718d3a9bb6a7fbf11644dcd7f296d4887", "takesurvey"=>"Submit", "sdfsdfd as3"=>"7", "asdfasdfasd2"=>"2"}
+  [4;36;1mSurvey Load (1.2ms)[0m   [0;1mSELECT * FROM "surveys" WHERE (title = 'l;fkjsdl;kfjklasfjlsdkajf') LIMIT 1[0m
+  [4;35;1mQuestion Load (0.7ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".survey_id = 1) [0m
+
+
+TypeError (can't convert Fixnum into String):
+    /app/controllers/survey_controller.rb:42:in `+'
+    /app/controllers/survey_controller.rb:42:in `take'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.3/lib/active_record/associations/association_collection.rb:359:in `method_missing'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.3/lib/active_record/associations/association_proxy.rb:212:in `method_missing'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.3/lib/active_record/associations/association_proxy.rb:212:in `each'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.3/lib/active_record/associations/association_proxy.rb:212:in `send'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.3/lib/active_record/associations/association_proxy.rb:212:in `method_missing'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.3/lib/active_record/associations/association_collection.rb:359:in `method_missing'
+    /app/controllers/survey_controller.rb:40:in `take'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:1256:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:1256:in `perform_action_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/filters.rb:617:in `call_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.3/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.3/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:524:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/session_management.rb:134:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:392:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:184:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:129:in `run'
+    /usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:282
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:142:in `load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:142:in `load'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.3/lib/commands/servers/mongrel.rb:64
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.3/lib/commands/server.rb:49
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/templates/rescues/_trace (34.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/templates/rescues/_request_and_response (2.1ms)
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing SurveyController#take (for 127.0.0.1 at 2010-10-19 17:02:20) [POST]
+  Parameters: {"authenticity_token"=>"46341e0718d3a9bb6a7fbf11644dcd7f296d4887", "takesurvey"=>"Submit", "sdfsdfd as3"=>"7", "asdfasdfasd2"=>"2"}
+  [4;36;1mSurvey Load (1.4ms)[0m   [0;1mSELECT * FROM "surveys" WHERE (title = 'l;fkjsdl;kfjklasfjlsdkajf') LIMIT 1[0m
+  [4;35;1mQuestion Load (0.9ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".survey_id = 1) [0m
+  [4;36;1mQuestion Load (1.0ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions"."id" = 1) [0m
+  [4;35;1mSurvey Load (0.7ms)[0m   [0mSELECT * FROM "surveys" WHERE ("surveys"."id" = 1) [0m
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Exists (0.3ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'blahblah' AND "users".id <> 1) LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'blahblah@' AND "users".id <> 1) LIMIT 1[0m
+  [4;35;1mSurvey Exists (0.3ms)[0m   [0mSELECT "surveys".id FROM "surveys" WHERE ("surveys"."title" = 'l;fkjsdl;kfjklasfjlsdkajf' AND "surveys".id <> 1) LIMIT 1[0m
+  [4;36;1mAnswer Create (4.3ms)[0m   [0;1mINSERT INTO "answers" ("question_id", "created_at", "updated_at", "choice_id") VALUES(1, '2010-10-20 00:02:20', '2010-10-20 00:02:20', NULL)[0m
+  [4;35;1mUser Exists (0.4ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'blahblah' AND "users".id <> 1) LIMIT 1[0m
+  [4;36;1mUser Exists (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'blahblah@' AND "users".id <> 1) LIMIT 1[0m
+  [4;35;1mSurvey Exists (0.3ms)[0m   [0mSELECT "surveys".id FROM "surveys" WHERE ("surveys"."title" = 'l;fkjsdl;kfjklasfjlsdkajf' AND "surveys".id <> 1) LIMIT 1[0m
+  [4;36;1mQuestion Load (1.2ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions"."id" = 2) [0m
+  [4;35;1mSurvey Load (0.6ms)[0m   [0mSELECT * FROM "surveys" WHERE ("surveys"."id" = 1) [0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'blahblah' AND "users".id <> 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'blahblah@' AND "users".id <> 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT "surveys".id FROM "surveys" WHERE ("surveys"."title" = 'l;fkjsdl;kfjklasfjlsdkajf' AND "surveys".id <> 1) LIMIT 1[0m
+  [4;36;1mAnswer Create (1.8ms)[0m   [0;1mINSERT INTO "answers" ("question_id", "created_at", "updated_at", "choice_id") VALUES(2, '2010-10-20 00:02:20', '2010-10-20 00:02:20', NULL)[0m
+  [4;35;1mUser Exists (0.5ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'blahblah' AND "users".id <> 1) LIMIT 1[0m
+  [4;36;1mUser Exists (1.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'blahblah@' AND "users".id <> 1) LIMIT 1[0m
+  [4;35;1mSurvey Exists (0.1ms)[0m   [0mSELECT "surveys".id FROM "surveys" WHERE ("surveys"."title" = 'l;fkjsdl;kfjklasfjlsdkajf' AND "surveys".id <> 1) LIMIT 1[0m
+Redirected to actionlist
+Completed in 147ms (DB: 17) | 302 Found [http://localhost/survey/take]
+
+
+Processing SurveyController#list (for 127.0.0.1 at 2010-10-19 17:02:20) [GET]
+  [4;36;1mSurvey Load (1.3ms)[0m   [0;1mSELECT * FROM "surveys" WHERE (published = 1) [0m
+Rendering template within layouts/application
+Rendering survey/list
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE (id = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (id = 1) LIMIT 1[0m
+Completed in 62ms (View: 48, DB: 1) | 200 OK [http://localhost/survey/list]
+
+
+Processing SurveyController#takeviewer (for 127.0.0.1 at 2010-10-19 17:02:22) [GET]
+  Parameters: {"survey_title"=>"l;fkjsdl;kfjklasfjlsdkajf", "l;fkjsdl;kfjklasfjlsdkajf"=>"Take Survey", "authenticity_token"=>"46341e0718d3a9bb6a7fbf11644dcd7f296d4887"}
+  [4;35;1mSurvey Load (1.1ms)[0m   [0mSELECT * FROM "surveys" WHERE (title = 'l;fkjsdl;kfjklasfjlsdkajf') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering survey/takeviewer
+  [4;36;1mQuestion Load (1.1ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".survey_id = 1) [0m
+  [4;35;1mChoice Load (2.2ms)[0m   [0mSELECT * FROM "choices" WHERE ("choices".question_id = 1) [0m
+  [4;36;1mChoice Load (1.7ms)[0m   [0;1mSELECT * FROM "choices" WHERE ("choices".question_id = 2) [0m
+Completed in 80ms (View: 64, DB: 1) | 200 OK [http://localhost/survey/takeviewer?authenticity_token=46341e0718d3a9bb6a7fbf11644dcd7f296d4887&survey_title=l%3Bfkjsdl%3Bkfjklasfjlsdkajf&l%3Bfkjsdl%3Bkfjklasfjlsdkajf=Take+Survey]
+
+
+Processing SurveyController#take (for 127.0.0.1 at 2010-10-19 17:02:26) [POST]
+  Parameters: {"authenticity_token"=>"46341e0718d3a9bb6a7fbf11644dcd7f296d4887", "takesurvey"=>"Submit", "sdfsdfd as3"=>"9", "asdfasdfasd2"=>"3"}
+  [4;35;1mSurvey Load (2.3ms)[0m   [0mSELECT * FROM "surveys" WHERE (title = 'l;fkjsdl;kfjklasfjlsdkajf') LIMIT 1[0m
+  [4;36;1mQuestion Load (1.3ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".survey_id = 1) [0m
+  [4;35;1mQuestion Load (0.9ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions"."id" = 1) [0m
+  [4;36;1mSurvey Load (0.5ms)[0m   [0;1mSELECT * FROM "surveys" WHERE ("surveys"."id" = 1) [0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'blahblah' AND "users".id <> 1) LIMIT 1[0m
+  [4;35;1mUser Exists (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'blahblah@' AND "users".id <> 1) LIMIT 1[0m
+  [4;36;1mSurvey Exists (0.2ms)[0m   [0;1mSELECT "surveys".id FROM "surveys" WHERE ("surveys"."title" = 'l;fkjsdl;kfjklasfjlsdkajf' AND "surveys".id <> 1) LIMIT 1[0m
+  [4;35;1mAnswer Create (1.3ms)[0m   [0mINSERT INTO "answers" ("question_id", "created_at", "updated_at", "choice_id") VALUES(1, '2010-10-20 00:02:26', '2010-10-20 00:02:26', NULL)[0m
+  [4;36;1mUser Exists (0.5ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'blahblah' AND "users".id <> 1) LIMIT 1[0m
+  [4;35;1mUser Exists (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'blahblah@' AND "users".id <> 1) LIMIT 1[0m
+  [4;36;1mSurvey Exists (0.2ms)[0m   [0;1mSELECT "surveys".id FROM "surveys" WHERE ("surveys"."title" = 'l;fkjsdl;kfjklasfjlsdkajf' AND "surveys".id <> 1) LIMIT 1[0m
+  [4;35;1mQuestion Load (0.7ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions"."id" = 2) [0m
+  [4;36;1mSurvey Load (0.3ms)[0m   [0;1mSELECT * FROM "surveys" WHERE ("surveys"."id" = 1) [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'blahblah' AND "users".id <> 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'blahblah@' AND "users".id <> 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT "surveys".id FROM "surveys" WHERE ("surveys"."title" = 'l;fkjsdl;kfjklasfjlsdkajf' AND "surveys".id <> 1) LIMIT 1[0m
+  [4;35;1mAnswer Create (2.4ms)[0m   [0mINSERT INTO "answers" ("question_id", "created_at", "updated_at", "choice_id") VALUES(2, '2010-10-20 00:02:26', '2010-10-20 00:02:26', NULL)[0m
+  [4;36;1mUser Exists (0.4ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'blahblah' AND "users".id <> 1) LIMIT 1[0m
+  [4;35;1mUser Exists (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'blahblah@' AND "users".id <> 1) LIMIT 1[0m
+  [4;36;1mSurvey Exists (0.1ms)[0m   [0;1mSELECT "surveys".id FROM "surveys" WHERE ("surveys"."title" = 'l;fkjsdl;kfjklasfjlsdkajf' AND "surveys".id <> 1) LIMIT 1[0m
+Redirected to actionlist
+Completed in 108ms (DB: 13) | 302 Found [http://localhost/survey/take]
+
+
+Processing SurveyController#list (for 127.0.0.1 at 2010-10-19 17:02:26) [GET]
+  [4;35;1mSurvey Load (1.4ms)[0m   [0mSELECT * FROM "surveys" WHERE (published = 1) [0m
+Rendering template within layouts/application
+Rendering survey/list
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE (id = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE (id = 1) LIMIT 1[0m
+Completed in 61ms (View: 46, DB: 1) | 200 OK [http://localhost/survey/list]
+
+
+Processing AccountController#login (for 127.0.0.1 at 2010-10-19 17:02:31) [GET]
+Redirected to actionmyaccount
+Completed in 4ms (DB: 0) | 302 Found [http://localhost/account/login]
+
+
+Processing AccountController#myaccount (for 127.0.0.1 at 2010-10-19 17:02:32) [GET]
+  [4;36;1mUser Load (1.5ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = 'blahblah') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering account/myaccount
+  [4;35;1mSurvey Load (1.7ms)[0m   [0mSELECT * FROM "surveys" WHERE ("surveys".user_id = 1) [0m
+Completed in 119ms (View: 103, DB: 2) | 200 OK [http://localhost/account/myaccount]
+
+
+Processing SurveyController#view (for 127.0.0.1 at 2010-10-19 17:02:34) [GET]
+  Parameters: {"survey_title"=>"rsdetujhsertyha ryha erh qerha erh ae", "rsdetujhsertyha ryha erh qerha erh ae"=>"view", "authenticity_token"=>"46341e0718d3a9bb6a7fbf11644dcd7f296d4887"}
+  [4;36;1mSurvey Load (1.5ms)[0m   [0;1mSELECT * FROM "surveys" WHERE (title = 'rsdetujhsertyha ryha erh qerha erh ae') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering survey/view
+  [4;35;1mQuestion Load (1.0ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".survey_id = 2) [0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT count(*) AS count_all FROM "answers" WHERE ("answers".question_id = 3) [0m
+  [4;35;1mChoice Load (1.5ms)[0m   [0mSELECT * FROM "choices" WHERE ("choices".question_id = 3) [0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSELECT count(*) AS count_all FROM "answers" WHERE (choice_id = 14) [0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSELECT count(*) AS count_all FROM "answers" WHERE (choice_id = 15) [0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT count(*) AS count_all FROM "answers" WHERE (choice_id = 16) [0m
+Completed in 98ms (View: 77, DB: 1) | 200 OK [http://localhost/survey/view?authenticity_token=46341e0718d3a9bb6a7fbf11644dcd7f296d4887&survey_title=rsdetujhsertyha+ryha+erh+qerha+erh+ae&rsdetujhsertyha+ryha+erh+qerha+erh+ae=view]
+
+
+Processing SurveyController#list (for 127.0.0.1 at 2010-10-19 17:02:38) [GET]
+  [4;35;1mSurvey Load (2.8ms)[0m   [0mSELECT * FROM "surveys" WHERE (published = 1) [0m
+Rendering template within layouts/application
+Rendering survey/list
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE (id = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE (id = 1) LIMIT 1[0m
+Completed in 57ms (View: 38, DB: 3) | 200 OK [http://localhost/survey/list]
+
+
+Processing SurveyController#takeviewer (for 127.0.0.1 at 2010-10-19 17:02:39) [GET]
+  Parameters: {"survey_title"=>"rsdetujhsertyha ryha erh qerha erh ae", "rsdetujhsertyha ryha erh qerha erh ae"=>"Take Survey", "authenticity_token"=>"46341e0718d3a9bb6a7fbf11644dcd7f296d4887"}
+  [4;36;1mSurvey Load (1.9ms)[0m   [0;1mSELECT * FROM "surveys" WHERE (title = 'rsdetujhsertyha ryha erh qerha erh ae') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering survey/takeviewer
+  [4;35;1mQuestion Load (1.0ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".survey_id = 2) [0m
+  [4;36;1mChoice Load (1.1ms)[0m   [0;1mSELECT * FROM "choices" WHERE ("choices".question_id = 3) [0m
+Completed in 67ms (View: 51, DB: 2) | 200 OK [http://localhost/survey/takeviewer?authenticity_token=46341e0718d3a9bb6a7fbf11644dcd7f296d4887&survey_title=rsdetujhsertyha+ryha+erh+qerha+erh+ae&rsdetujhsertyha+ryha+erh+qerha+erh+ae=Take+Survey]
+
+
+Processing SurveyController#take (for 127.0.0.1 at 2010-10-19 17:02:41) [POST]
+  Parameters: {"authenticity_token"=>"46341e0718d3a9bb6a7fbf11644dcd7f296d4887", "takesurvey"=>"Submit", "hhsethwt4hethswethw4h2"=>"14"}
+  [4;35;1mSurvey Load (1.0ms)[0m   [0mSELECT * FROM "surveys" WHERE (title = 'rsdetujhsertyha ryha erh qerha erh ae') LIMIT 1[0m
+  [4;36;1mQuestion Load (0.9ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".survey_id = 2) [0m
+  [4;35;1mQuestion Load (0.8ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions"."id" = 3) [0m
+  [4;36;1mSurvey Load (0.6ms)[0m   [0;1mSELECT * FROM "surveys" WHERE ("surveys"."id" = 2) [0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Exists (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'blahblah' AND "users".id <> 1) LIMIT 1[0m
+  [4;35;1mUser Exists (0.3ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'blahblah@' AND "users".id <> 1) LIMIT 1[0m
+  [4;36;1mSurvey Exists (0.4ms)[0m   [0;1mSELECT "surveys".id FROM "surveys" WHERE ("surveys"."title" = 'rsdetujhsertyha ryha erh qerha erh ae' AND "surveys".id <> 2) LIMIT 1[0m
+  [4;35;1mAnswer Create (1.7ms)[0m   [0mINSERT INTO "answers" ("question_id", "created_at", "updated_at", "choice_id") VALUES(3, '2010-10-20 00:02:41', '2010-10-20 00:02:41', NULL)[0m
+  [4;36;1mUser Exists (0.6ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'blahblah' AND "users".id <> 1) LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'blahblah@' AND "users".id <> 1) LIMIT 1[0m
+  [4;36;1mSurvey Exists (0.2ms)[0m   [0;1mSELECT "surveys".id FROM "surveys" WHERE ("surveys"."title" = 'rsdetujhsertyha ryha erh qerha erh ae' AND "surveys".id <> 2) LIMIT 1[0m
+Redirected to actionlist
+Completed in 151ms (DB: 8) | 302 Found [http://localhost/survey/take]
+
+
+Processing SurveyController#list (for 127.0.0.1 at 2010-10-19 17:02:41) [GET]
+  [4;35;1mSurvey Load (1.8ms)[0m   [0mSELECT * FROM "surveys" WHERE (published = 1) [0m
+Rendering template within layouts/application
+Rendering survey/list
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" WHERE (id = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE (id = 1) LIMIT 1[0m
+Completed in 59ms (View: 42, DB: 2) | 200 OK [http://localhost/survey/list]
+
+
+Processing AccountController#login (for 127.0.0.1 at 2010-10-19 17:02:43) [GET]
+Redirected to actionmyaccount
+Completed in 5ms (DB: 0) | 302 Found [http://localhost/account/login]
+
+
+Processing AccountController#myaccount (for 127.0.0.1 at 2010-10-19 17:02:43) [GET]
+  [4;36;1mUser Load (1.1ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = 'blahblah') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering account/myaccount
+  [4;35;1mSurvey Load (1.3ms)[0m   [0mSELECT * FROM "surveys" WHERE ("surveys".user_id = 1) [0m
+Completed in 58ms (View: 46, DB: 1) | 200 OK [http://localhost/account/myaccount]
+
+
+Processing SurveyController#view (for 127.0.0.1 at 2010-10-19 17:02:44) [GET]
+  Parameters: {"survey_title"=>"rsdetujhsertyha ryha erh qerha erh ae", "rsdetujhsertyha ryha erh qerha erh ae"=>"view", "authenticity_token"=>"46341e0718d3a9bb6a7fbf11644dcd7f296d4887"}
+  [4;36;1mSurvey Load (1.5ms)[0m   [0;1mSELECT * FROM "surveys" WHERE (title = 'rsdetujhsertyha ryha erh qerha erh ae') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering survey/view
+  [4;35;1mQuestion Load (1.0ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".survey_id = 2) [0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSELECT count(*) AS count_all FROM "answers" WHERE ("answers".question_id = 3) [0m
+  [4;35;1mChoice Load (1.2ms)[0m   [0mSELECT * FROM "choices" WHERE ("choices".question_id = 3) [0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT count(*) AS count_all FROM "answers" WHERE (choice_id = 14) [0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSELECT count(*) AS count_all FROM "answers" WHERE (choice_id = 15) [0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT count(*) AS count_all FROM "answers" WHERE (choice_id = 16) [0m
+Completed in 85ms (View: 67, DB: 2) | 200 OK [http://localhost/survey/view?authenticity_token=46341e0718d3a9bb6a7fbf11644dcd7f296d4887&survey_title=rsdetujhsertyha+ryha+erh+qerha+erh+ae&rsdetujhsertyha+ryha+erh+qerha+erh+ae=view]
+
+
+Processing SurveyController#list (for 127.0.0.1 at 2010-10-19 17:03:24) [GET]
+  [4;35;1mSurvey Load (1.7ms)[0m   [0mSELECT * FROM "surveys" WHERE (published = 1) [0m
+Rendering template within layouts/application
+Rendering survey/list
+  [4;36;1mUser Load (1.2ms)[0m   [0;1mSELECT * FROM "users" WHERE (id = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE (id = 1) LIMIT 1[0m
+Completed in 156ms (View: 65, DB: 2) | 200 OK [http://localhost/survey/list]
+
+
+Processing SurveyController#takeviewer (for 127.0.0.1 at 2010-10-19 17:03:26) [GET]
+  Parameters: {"survey_title"=>"rsdetujhsertyha ryha erh qerha erh ae", "rsdetujhsertyha ryha erh qerha erh ae"=>"Take Survey", "authenticity_token"=>"46341e0718d3a9bb6a7fbf11644dcd7f296d4887"}
+  [4;36;1mSurvey Load (1.6ms)[0m   [0;1mSELECT * FROM "surveys" WHERE (title = 'rsdetujhsertyha ryha erh qerha erh ae') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering survey/takeviewer
+  [4;35;1mQuestion Load (0.8ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".survey_id = 2) [0m
+  [4;36;1mChoice Load (1.2ms)[0m   [0;1mSELECT * FROM "choices" WHERE ("choices".question_id = 3) [0m
+Completed in 80ms (View: 62, DB: 2) | 200 OK [http://localhost/survey/takeviewer?authenticity_token=46341e0718d3a9bb6a7fbf11644dcd7f296d4887&survey_title=rsdetujhsertyha+ryha+erh+qerha+erh+ae&rsdetujhsertyha+ryha+erh+qerha+erh+ae=Take+Survey]
+
+
+Processing SurveyController#takeviewer (for 127.0.0.1 at 2010-10-19 17:04:13) [GET]
+  Parameters: {"survey_title"=>"rsdetujhsertyha ryha erh qerha erh ae", "rsdetujhsertyha ryha erh qerha erh ae"=>"Take Survey", "authenticity_token"=>"46341e0718d3a9bb6a7fbf11644dcd7f296d4887"}
+  [4;35;1mSurvey Load (1.1ms)[0m   [0mSELECT * FROM "surveys" WHERE (title = 'rsdetujhsertyha ryha erh qerha erh ae') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering survey/takeviewer
+  [4;36;1mQuestion Load (0.8ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".survey_id = 2) [0m
+  [4;35;1mChoice Load (0.7ms)[0m   [0mSELECT * FROM "choices" WHERE ("choices".question_id = 3) [0m
+Completed in 51ms (View: 39, DB: 1) | 200 OK [http://localhost/survey/takeviewer?authenticity_token=46341e0718d3a9bb6a7fbf11644dcd7f296d4887&survey_title=rsdetujhsertyha+ryha+erh+qerha+erh+ae&rsdetujhsertyha+ryha+erh+qerha+erh+ae=Take+Survey]
+
+
+Processing SurveyController#takeviewer (for 127.0.0.1 at 2010-10-19 17:04:34) [GET]
+  Parameters: {"survey_title"=>"rsdetujhsertyha ryha erh qerha erh ae", "rsdetujhsertyha ryha erh qerha erh ae"=>"Take Survey", "authenticity_token"=>"46341e0718d3a9bb6a7fbf11644dcd7f296d4887"}
+  [4;36;1mSurvey Load (0.9ms)[0m   [0;1mSELECT * FROM "surveys" WHERE (title = 'rsdetujhsertyha ryha erh qerha erh ae') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering survey/takeviewer
+  [4;35;1mQuestion Load (0.5ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".survey_id = 2) [0m
+  [4;36;1mChoice Load (0.8ms)[0m   [0;1mSELECT * FROM "choices" WHERE ("choices".question_id = 3) [0m
+Completed in 50ms (View: 39, DB: 1) | 200 OK [http://localhost/survey/takeviewer?authenticity_token=46341e0718d3a9bb6a7fbf11644dcd7f296d4887&survey_title=rsdetujhsertyha+ryha+erh+qerha+erh+ae&rsdetujhsertyha+ryha+erh+qerha+erh+ae=Take+Survey]
+
+
+Processing SurveyController#take (for 127.0.0.1 at 2010-10-19 17:04:46) [POST]
+  Parameters: {"authenticity_token"=>"46341e0718d3a9bb6a7fbf11644dcd7f296d4887", "hhsethwt4hethswethw4h1"=>"14", "takesurvey"=>"Submit"}
+  [4;35;1mSurvey Load (1.4ms)[0m   [0mSELECT * FROM "surveys" WHERE (title = 'rsdetujhsertyha ryha erh qerha erh ae') LIMIT 1[0m
+  [4;36;1mQuestion Load (0.8ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".survey_id = 2) [0m
+  [4;35;1mQuestion Load (0.9ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions"."id" = 3) [0m
+  [4;36;1mSurvey Load (0.5ms)[0m   [0;1mSELECT * FROM "surveys" WHERE ("surveys"."id" = 2) [0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'blahblah' AND "users".id <> 1) LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'blahblah@' AND "users".id <> 1) LIMIT 1[0m
+  [4;36;1mSurvey Exists (0.4ms)[0m   [0;1mSELECT "surveys".id FROM "surveys" WHERE ("surveys"."title" = 'rsdetujhsertyha ryha erh qerha erh ae' AND "surveys".id <> 2) LIMIT 1[0m
+  [4;35;1mAnswer Create (1.9ms)[0m   [0mINSERT INTO "answers" ("question_id", "created_at", "updated_at", "choice_id") VALUES(3, '2010-10-20 00:04:46', '2010-10-20 00:04:46', 14)[0m
+  [4;36;1mUser Exists (0.4ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'blahblah' AND "users".id <> 1) LIMIT 1[0m
+  [4;35;1mUser Exists (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'blahblah@' AND "users".id <> 1) LIMIT 1[0m
+  [4;36;1mSurvey Exists (0.1ms)[0m   [0;1mSELECT "surveys".id FROM "surveys" WHERE ("surveys"."title" = 'rsdetujhsertyha ryha erh qerha erh ae' AND "surveys".id <> 2) LIMIT 1[0m
+Redirected to actionlist
+Completed in 87ms (DB: 7) | 302 Found [http://localhost/survey/take]
+
+
+Processing SurveyController#list (for 127.0.0.1 at 2010-10-19 17:04:46) [GET]
+  [4;35;1mSurvey Load (1.2ms)[0m   [0mSELECT * FROM "surveys" WHERE (published = 1) [0m
+Rendering template within layouts/application
+Rendering survey/list
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (id = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE (id = 1) LIMIT 1[0m
+Completed in 64ms (View: 46, DB: 1) | 200 OK [http://localhost/survey/list]
+
+
+Processing AccountController#login (for 127.0.0.1 at 2010-10-19 17:04:48) [GET]
+Redirected to actionmyaccount
+Completed in 4ms (DB: 0) | 302 Found [http://localhost/account/login]
+
+
+Processing AccountController#myaccount (for 127.0.0.1 at 2010-10-19 17:04:48) [GET]
+  [4;36;1mUser Load (1.2ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = 'blahblah') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering account/myaccount
+  [4;35;1mSurvey Load (0.8ms)[0m   [0mSELECT * FROM "surveys" WHERE ("surveys".user_id = 1) [0m
+Completed in 50ms (View: 37, DB: 1) | 200 OK [http://localhost/account/myaccount]
+
+
+Processing SurveyController#view (for 127.0.0.1 at 2010-10-19 17:04:49) [GET]
+  Parameters: {"survey_title"=>"rsdetujhsertyha ryha erh qerha erh ae", "rsdetujhsertyha ryha erh qerha erh ae"=>"view", "authenticity_token"=>"46341e0718d3a9bb6a7fbf11644dcd7f296d4887"}
+  [4;36;1mSurvey Load (1.6ms)[0m   [0;1mSELECT * FROM "surveys" WHERE (title = 'rsdetujhsertyha ryha erh qerha erh ae') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering survey/view
+  [4;35;1mQuestion Load (1.0ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".survey_id = 2) [0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT count(*) AS count_all FROM "answers" WHERE ("answers".question_id = 3) [0m
+  [4;35;1mChoice Load (1.1ms)[0m   [0mSELECT * FROM "choices" WHERE ("choices".question_id = 3) [0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT count(*) AS count_all FROM "answers" WHERE (choice_id = 14) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "answers" WHERE (choice_id = 15) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM "answers" WHERE (choice_id = 16) [0m
+Completed in 78ms (View: 60, DB: 2) | 200 OK [http://localhost/survey/view?authenticity_token=46341e0718d3a9bb6a7fbf11644dcd7f296d4887&survey_title=rsdetujhsertyha+ryha+erh+qerha+erh+ae&rsdetujhsertyha+ryha+erh+qerha+erh+ae=view]
+  [4;36;1mSQL (1.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (3.3ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (4.7ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateSurveys (20101013060530)
+  [4;36;1mSQL (3.0ms)[0m   [0;1mCREATE TABLE "surveys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" varchar(255), "published" integer, "user_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (3.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20101013060530')[0m
+Migrating to CreateUsers (20101013060601)
+  [4;36;1mSQL (3.3ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "password" varchar(255), "email" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (2.8ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20101013060601')[0m
+Migrating to CreateQuestions (20101013060606)
+  [4;36;1mSQL (4.2ms)[0m   [0;1mCREATE TABLE "questions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "description" varchar(255), "survey_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (4.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20101013060606')[0m
+Migrating to CreateChoices (20101013060610)
+  [4;36;1mSQL (4.1ms)[0m   [0;1mCREATE TABLE "choices" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "description" varchar(255), "question_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (2.8ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20101013060610')[0m
+Migrating to CreateAnswers (20101013060614)
+  [4;36;1mSQL (4.2ms)[0m   [0;1mCREATE TABLE "answers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "choice_id" integer, "question_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (8.9ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20101013060614')[0m
+Migrating to CreateTakens (20101013061658)
+  [4;36;1mSQL (4.7ms)[0m   [0;1mCREATE TABLE "takens" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "ip" varchar(255), "survey_id" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (2.6ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20101013061658')[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("answers")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("choices")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("questions")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("surveys")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("takens")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("users")[0m
+
+
+Processing SurveyController#takeviewer (for 127.0.0.1 at 2010-10-19 17:05:43) [GET]
+  Parameters: {"survey_title"=>"rsdetujhsertyha ryha erh qerha erh ae", "rsdetujhsertyha ryha erh qerha erh ae"=>"Take Survey", "authenticity_token"=>"46341e0718d3a9bb6a7fbf11644dcd7f296d4887"}
+  [4;36;1mSurvey Load (1.5ms)[0m   [0;1mSELECT * FROM "surveys" WHERE (title = 'rsdetujhsertyha ryha erh qerha erh ae') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering survey/takeviewer
+
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.title) on line #3 of app/views/survey/takeviewer.html.erb:
+1: <div id="middle">
+2: 	<div class="post">
+3: 		<div class="postheader"><h1><%= @survey.title %></h1></div>
+4: 		<div class="postcontent">
+5: 			<p>Description :<br /> <%= @survey.description %></p>
+6: <!-- 			javascript validate to make sure all questions are answered -->
+
+    app/views/survey/takeviewer.html.erb:3
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_view/renderable.rb:39:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_view/renderable.rb:39:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_view/template.rb:73:in `render_template'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_view/base.rb:256:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_view/base.rb:369:in `_render_with_layout'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_view/base.rb:254:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:1177:in `render_for_file'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:896:in `render_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.3/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:868:in `render_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.3/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:1251:in `default_render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:1257:in `perform_action_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/filters.rb:617:in `call_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.3/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.3/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:524:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/session_management.rb:134:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:392:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:184:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:129:in `run'
+    /usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:282
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:142:in `load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:142:in `load'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.3/lib/commands/servers/mongrel.rb:64
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.3/lib/commands/server.rb:49
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/templates/rescues/_trace (55.3ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/templates/rescues/_request_and_response (2.3ms)
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-10-19 17:07:43) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Completed in 25ms (View: 21, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing AccountController#login (for 127.0.0.1 at 2010-10-19 17:08:06) [GET]
+Redirected to actionmyaccount
+Completed in 4ms (DB: 0) | 302 Found [http://localhost/account/login]
+
+
+Processing AccountController#myaccount (for 127.0.0.1 at 2010-10-19 17:08:06) [GET]
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'blahblah') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering account/myaccount
+
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.surveys) on line #52 of app/views/account/myaccount.html.erb:
+49: 						<th><p>DESCRIPTION</p></th>
+50: 						<th><p>PUBLISHED</p></th>
+51: 					</tr>
+52: 					<% @user.surveys.each do |s| %>
+53: 					<tr>
+54: 						<th><p><%=h s.title %></p></th>
+55: 						<th><p><%=h s.description %></p></th>
+
+    app/views/account/myaccount.html.erb:52
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_view/renderable.rb:39:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_view/renderable.rb:39:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_view/template.rb:73:in `render_template'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_view/base.rb:256:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_view/base.rb:369:in `_render_with_layout'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_view/base.rb:254:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:1177:in `render_for_file'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:896:in `render_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.3/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:868:in `render_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.3/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:1251:in `default_render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:1257:in `perform_action_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/filters.rb:617:in `call_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.3/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.3/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:524:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/session_management.rb:134:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:392:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:184:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:129:in `run'
+    /usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:282
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:142:in `load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:142:in `load'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.3/lib/commands/servers/mongrel.rb:64
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.3/lib/commands/server.rb:49
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/templates/rescues/_trace (52.2ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/templates/rescues/_request_and_response (1.2ms)
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing AccountController#myaccount (for 127.0.0.1 at 2010-10-19 17:08:23) [GET]
+Redirected to actionlogin
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/account/myaccount]
+
+
+Processing AccountController#login (for 127.0.0.1 at 2010-10-19 17:08:23) [GET]
+Rendering template within layouts/application
+Rendering account/login
+Completed in 19ms (View: 16, DB: 0) | 200 OK [http://localhost/account/login]
+
+
+Processing AccountController#login (for 127.0.0.1 at 2010-10-19 17:08:28) [GET]
+Rendering template within layouts/application
+Rendering account/login
+Completed in 29ms (View: 26, DB: 0) | 200 OK [http://localhost/account/login]
+
+
+Processing AccountController#register (for 127.0.0.1 at 2010-10-19 17:08:31) [GET]
+Rendering template within layouts/application
+Rendering account/register
+Completed in 46ms (View: 20, DB: 0) | 200 OK [http://localhost/account/register]
+
+
+Processing AccountController#register (for 127.0.0.1 at 2010-10-19 17:08:46) [POST]
+  Parameters: {"authenticity_token"=>"39cc82e186c8fad922f6afe799359c95bf1aec64", "account"=>"Submit", "Password2"=>"blahblah", "userform"=>{"username"=>"blahblah", "password"=>"blahblah", "email"=>"blahblah@stupid"}}
+  [4;36;1mUser Exists (0.5ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'blahblah') LIMIT 1[0m
+  [4;35;1mUser Exists (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'blahblah@stupid') LIMIT 1[0m
+  [4;36;1mUser Create (2.2ms)[0m   [0;1mINSERT INTO "users" ("created_at", "updated_at", "username", "password", "email") VALUES('2010-10-20 00:08:46', '2010-10-20 00:08:46', 'blahblah', 'blahblah', 'blahblah@stupid')[0m
+Redirected to actionmyaccount
+Completed in 26ms (DB: 3) | 302 Found [http://localhost/account/register]
+
+
+Processing AccountController#myaccount (for 127.0.0.1 at 2010-10-19 17:08:46) [GET]
+  [4;35;1mUser Load (1.3ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'blahblah') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering account/myaccount
+  [4;36;1mSurvey Load (0.5ms)[0m   [0;1mSELECT * FROM "surveys" WHERE ("surveys".user_id = 1) [0m
+Completed in 49ms (View: 33, DB: 1) | 200 OK [http://localhost/account/myaccount]
+
+
+Processing SurveyController#create (for 127.0.0.1 at 2010-10-19 17:08:48) [GET]
+  Parameters: {"createsurvey"=>"Create Survey", "authenticity_token"=>"39cc82e186c8fad922f6afe799359c95bf1aec64"}
+Rendering template within layouts/application
+Rendering survey/create
+Completed in 22ms (View: 16, DB: 0) | 200 OK [http://localhost/survey/create?authenticity_token=39cc82e186c8fad922f6afe799359c95bf1aec64&createsurvey=Create+Survey]
+
+
+Processing SurveyController#validate_survey (for 127.0.0.1 at 2010-10-19 17:09:08) [POST]
+  Parameters: {"CreateSurvey"=>"Create Survey", "authenticity_token"=>"39cc82e186c8fad922f6afe799359c95bf1aec64", "userform"=>{"title"=>"Same Question", "published"=>"0", "description"=>"Same Question"}}
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'blahblah') LIMIT 1[0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Exists (0.3ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'blahblah' AND "users".id <> 1) LIMIT 1[0m
+  [4;36;1mUser Exists (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'blahblah@stupid' AND "users".id <> 1) LIMIT 1[0m
+  [4;35;1mSurvey Exists (0.1ms)[0m   [0mSELECT "surveys".id FROM "surveys" WHERE ("surveys"."title" = 'Same Question') LIMIT 1[0m
+  [4;36;1mSurvey Create (2.1ms)[0m   [0;1mINSERT INTO "surveys" ("created_at", "title", "published", "updated_at", "user_id", "description") VALUES('2010-10-20 00:09:08', 'Same Question', 0, '2010-10-20 00:09:08', 1, 'Same Question')[0m
+  [4;35;1mUser Exists (0.5ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'blahblah' AND "users".id <> 1) LIMIT 1[0m
+  [4;36;1mUser Exists (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'blahblah@stupid' AND "users".id <> 1) LIMIT 1[0m
+  [4;35;1mSurvey Exists (0.1ms)[0m   [0mSELECT "surveys".id FROM "surveys" WHERE ("surveys"."title" = 'Same Question' AND "surveys".id <> 1) LIMIT 1[0m
+Redirected to actionaddquestion
+Completed in 50ms (DB: 5) | 302 Found [http://localhost/survey/validate_survey]
+
+
+Processing SurveyController#addquestion (for 127.0.0.1 at 2010-10-19 17:09:08) [GET]
+  [4;36;1mSurvey Load (1.0ms)[0m   [0;1mSELECT * FROM "surveys" WHERE (title = 'Same Question') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering survey/addquestion
+  [4;35;1mQuestion Load (0.4ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".survey_id = 1) [0m
+Completed in 53ms (View: 26, DB: 1) | 200 OK [http://localhost/survey/addquestion]
+
+
+Processing SurveyController#addquestion (for 127.0.0.1 at 2010-10-19 17:09:22) [POST]
+  Parameters: {"AddQuestion"=>"Add Question", "choice"=>"choice 1\r\nchoice 2\r\nchoice 3", "authenticity_token"=>"39cc82e186c8fad922f6afe799359c95bf1aec64", "userform"=>{"description"=>"This is a question"}}
+  [4;36;1mSurvey Load (0.7ms)[0m   [0;1mSELECT * FROM "surveys" WHERE (title = 'Same Question') LIMIT 1[0m
+  [4;35;1mSurvey Load (1.1ms)[0m   [0mSELECT * FROM "surveys" WHERE ("surveys"."id" = 1) [0m
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Exists (0.5ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'blahblah' AND "users".id <> 1) LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'blahblah@stupid' AND "users".id <> 1) LIMIT 1[0m
+  [4;35;1mSurvey Exists (0.2ms)[0m   [0mSELECT "surveys".id FROM "surveys" WHERE ("surveys"."title" = 'Same Question' AND "surveys".id <> 1) LIMIT 1[0m
+  [4;36;1mQuestion Create (2.3ms)[0m   [0;1mINSERT INTO "questions" ("created_at", "updated_at", "survey_id", "description") VALUES('2010-10-20 00:09:22', '2010-10-20 00:09:22', 1, 'This is a question')[0m
+  [4;35;1mUser Exists (0.6ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'blahblah' AND "users".id <> 1) LIMIT 1[0m
+  [4;36;1mUser Exists (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'blahblah@stupid' AND "users".id <> 1) LIMIT 1[0m
+  [4;35;1mSurvey Exists (0.3ms)[0m   [0mSELECT "surveys".id FROM "surveys" WHERE ("surveys"."title" = 'Same Question' AND "surveys".id <> 1) LIMIT 1[0m
+  [4;36;1mQuestion Load (0.7ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions"."id" = 1) [0m
+  [4;35;1mSurvey Load (0.6ms)[0m   [0mSELECT * FROM "surveys" WHERE ("surveys"."id" = 1) [0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'blahblah' AND "users".id <> 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'blahblah@stupid' AND "users".id <> 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT "surveys".id FROM "surveys" WHERE ("surveys"."title" = 'Same Question' AND "surveys".id <> 1) LIMIT 1[0m
+  [4;36;1mChoice Create (2.1ms)[0m   [0;1mINSERT INTO "choices" ("question_id", "created_at", "updated_at", "description") VALUES(1, '2010-10-20 00:09:22', '2010-10-20 00:09:22', 'choice 1')[0m
+  [4;35;1mUser Exists (0.6ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'blahblah' AND "users".id <> 1) LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'blahblah@stupid' AND "users".id <> 1) LIMIT 1[0m
+  [4;35;1mSurvey Exists (0.1ms)[0m   [0mSELECT "surveys".id FROM "surveys" WHERE ("surveys"."title" = 'Same Question' AND "surveys".id <> 1) LIMIT 1[0m
+  [4;36;1mQuestion Load (0.6ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions"."id" = 1) [0m
+  [4;35;1mSurvey Load (0.3ms)[0m   [0mSELECT * FROM "surveys" WHERE ("surveys"."id" = 1) [0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'blahblah' AND "users".id <> 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'blahblah@stupid' AND "users".id <> 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT "surveys".id FROM "surveys" WHERE ("surveys"."title" = 'Same Question' AND "surveys".id <> 1) LIMIT 1[0m
+  [4;36;1mChoice Create (2.5ms)[0m   [0;1mINSERT INTO "choices" ("question_id", "created_at", "updated_at", "description") VALUES(1, '2010-10-20 00:09:22', '2010-10-20 00:09:22', 'choice 2')[0m
+  [4;35;1mUser Exists (0.6ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'blahblah' AND "users".id <> 1) LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'blahblah@stupid' AND "users".id <> 1) LIMIT 1[0m
+  [4;35;1mSurvey Exists (0.2ms)[0m   [0mSELECT "surveys".id FROM "surveys" WHERE ("surveys"."title" = 'Same Question' AND "surveys".id <> 1) LIMIT 1[0m
+  [4;36;1mQuestion Load (0.9ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions"."id" = 1) [0m
+  [4;35;1mSurvey Load (0.6ms)[0m   [0mSELECT * FROM "surveys" WHERE ("surveys"."id" = 1) [0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'blahblah' AND "users".id <> 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'blahblah@stupid' AND "users".id <> 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT "surveys".id FROM "surveys" WHERE ("surveys"."title" = 'Same Question' AND "surveys".id <> 1) LIMIT 1[0m
+  [4;36;1mChoice Create (1.9ms)[0m   [0;1mINSERT INTO "choices" ("question_id", "created_at", "updated_at", "description") VALUES(1, '2010-10-20 00:09:22', '2010-10-20 00:09:22', 'choice 3')[0m
+  [4;35;1mUser Exists (0.6ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'blahblah' AND "users".id <> 1) LIMIT 1[0m
+  [4;36;1mUser Exists (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'blahblah@stupid' AND "users".id <> 1) LIMIT 1[0m
+  [4;35;1mSurvey Exists (0.2ms)[0m   [0mSELECT "surveys".id FROM "surveys" WHERE ("surveys"."title" = 'Same Question' AND "surveys".id <> 1) LIMIT 1[0m
+Redirected to actionaddquestion
+Completed in 213ms (DB: 22) | 302 Found [http://localhost/survey/addquestion]
+
+
+Processing SurveyController#addquestion (for 127.0.0.1 at 2010-10-19 17:09:22) [GET]
+  [4;36;1mSurvey Load (1.3ms)[0m   [0;1mSELECT * FROM "surveys" WHERE (title = 'Same Question') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering survey/addquestion
+  [4;35;1mQuestion Load (0.9ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".survey_id = 1) [0m
+  [4;36;1mChoice Load (1.0ms)[0m   [0;1mSELECT * FROM "choices" WHERE ("choices".question_id = 1) [0m
+Completed in 73ms (View: 44, DB: 1) | 200 OK [http://localhost/survey/addquestion]
+
+
+Processing SurveyController#addquestion (for 127.0.0.1 at 2010-10-19 17:09:32) [POST]
+  Parameters: {"AddQuestion"=>"Add Question", "choice"=>"choice 1\r\nchoice 2", "authenticity_token"=>"39cc82e186c8fad922f6afe799359c95bf1aec64", "userform"=>{"description"=>"This is a question"}}
+  [4;35;1mSurvey Load (0.8ms)[0m   [0mSELECT * FROM "surveys" WHERE (title = 'Same Question') LIMIT 1[0m
+  [4;36;1mSurvey Load (0.8ms)[0m   [0;1mSELECT * FROM "surveys" WHERE ("surveys"."id" = 1) [0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'blahblah' AND "users".id <> 1) LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'blahblah@stupid' AND "users".id <> 1) LIMIT 1[0m
+  [4;36;1mSurvey Exists (0.2ms)[0m   [0;1mSELECT "surveys".id FROM "surveys" WHERE ("surveys"."title" = 'Same Question' AND "surveys".id <> 1) LIMIT 1[0m
+  [4;35;1mQuestion Create (2.2ms)[0m   [0mINSERT INTO "questions" ("created_at", "updated_at", "survey_id", "description") VALUES('2010-10-20 00:09:33', '2010-10-20 00:09:33', 1, 'This is a question')[0m
+  [4;36;1mUser Exists (0.7ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'blahblah' AND "users".id <> 1) LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'blahblah@stupid' AND "users".id <> 1) LIMIT 1[0m
+  [4;36;1mSurvey Exists (0.2ms)[0m   [0;1mSELECT "surveys".id FROM "surveys" WHERE ("surveys"."title" = 'Same Question' AND "surveys".id <> 1) LIMIT 1[0m
+  [4;35;1mQuestion Load (1.2ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions"."id" = 2) [0m
+  [4;36;1mSurvey Load (0.6ms)[0m   [0;1mSELECT * FROM "surveys" WHERE ("surveys"."id" = 1) [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'blahblah' AND "users".id <> 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'blahblah@stupid' AND "users".id <> 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT "surveys".id FROM "surveys" WHERE ("surveys"."title" = 'Same Question' AND "surveys".id <> 1) LIMIT 1[0m
+  [4;35;1mChoice Create (2.1ms)[0m   [0mINSERT INTO "choices" ("question_id", "created_at", "updated_at", "description") VALUES(2, '2010-10-20 00:09:33', '2010-10-20 00:09:33', 'choice 1')[0m
+  [4;36;1mUser Exists (0.5ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'blahblah' AND "users".id <> 1) LIMIT 1[0m
+  [4;35;1mUser Exists (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'blahblah@stupid' AND "users".id <> 1) LIMIT 1[0m
+  [4;36;1mSurvey Exists (0.3ms)[0m   [0;1mSELECT "surveys".id FROM "surveys" WHERE ("surveys"."title" = 'Same Question' AND "surveys".id <> 1) LIMIT 1[0m
+  [4;35;1mQuestion Load (0.7ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions"."id" = 2) [0m
+  [4;36;1mSurvey Load (0.3ms)[0m   [0;1mSELECT * FROM "surveys" WHERE ("surveys"."id" = 1) [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'blahblah' AND "users".id <> 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'blahblah@stupid' AND "users".id <> 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT "surveys".id FROM "surveys" WHERE ("surveys"."title" = 'Same Question' AND "surveys".id <> 1) LIMIT 1[0m
+  [4;35;1mChoice Create (3.1ms)[0m   [0mINSERT INTO "choices" ("question_id", "created_at", "updated_at", "description") VALUES(2, '2010-10-20 00:09:33', '2010-10-20 00:09:33', 'choice 2')[0m
+  [4;36;1mUser Exists (0.5ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'blahblah' AND "users".id <> 1) LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'blahblah@stupid' AND "users".id <> 1) LIMIT 1[0m
+  [4;36;1mSurvey Exists (0.1ms)[0m   [0;1mSELECT "surveys".id FROM "surveys" WHERE ("surveys"."title" = 'Same Question' AND "surveys".id <> 1) LIMIT 1[0m
+Redirected to actionaddquestion
+Completed in 119ms (DB: 16) | 302 Found [http://localhost/survey/addquestion]
+
+
+Processing SurveyController#addquestion (for 127.0.0.1 at 2010-10-19 17:09:33) [GET]
+  [4;35;1mSurvey Load (0.7ms)[0m   [0mSELECT * FROM "surveys" WHERE (title = 'Same Question') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering survey/addquestion
+  [4;36;1mQuestion Load (1.0ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".survey_id = 1) [0m
+  [4;35;1mChoice Load (1.3ms)[0m   [0mSELECT * FROM "choices" WHERE ("choices".question_id = 1) [0m
+  [4;36;1mChoice Load (0.8ms)[0m   [0;1mSELECT * FROM "choices" WHERE ("choices".question_id = 2) [0m
+Completed in 74ms (View: 48, DB: 1) | 200 OK [http://localhost/survey/addquestion]
+
+
+Processing AccountController#login (for 127.0.0.1 at 2010-10-19 17:09:41) [GET]
+Redirected to actionmyaccount
+Completed in 4ms (DB: 0) | 302 Found [http://localhost/account/login]
+
+
+Processing AccountController#myaccount (for 127.0.0.1 at 2010-10-19 17:09:41) [GET]
+  [4;35;1mUser Load (1.4ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'blahblah') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering account/myaccount
+  [4;36;1mSurvey Load (1.0ms)[0m   [0;1mSELECT * FROM "surveys" WHERE ("surveys".user_id = 1) [0m
+Completed in 58ms (View: 43, DB: 1) | 200 OK [http://localhost/account/myaccount]
+
+
+Processing SurveyController#publish (for 127.0.0.1 at 2010-10-19 17:09:42) [GET]
+  Parameters: {"survey_title"=>"Same Question", "Same Question"=>"publish", "authenticity_token"=>"39cc82e186c8fad922f6afe799359c95bf1aec64"}
+  [4;35;1mSurvey Load (1.1ms)[0m   [0mSELECT * FROM "surveys" WHERE (title = 'Same Question') LIMIT 1[0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'blahblah' AND "users".id <> 1) LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'blahblah@stupid' AND "users".id <> 1) LIMIT 1[0m
+  [4;35;1mSurvey Exists (0.2ms)[0m   [0mSELECT "surveys".id FROM "surveys" WHERE ("surveys"."title" = 'Same Question' AND "surveys".id <> 1) LIMIT 1[0m
+  [4;36;1mSurvey Update (2.3ms)[0m   [0;1mUPDATE "surveys" SET "updated_at" = '2010-10-20 00:09:43', "published" = 1 WHERE "id" = 1[0m
+Redirected to controlleraccountactionmyaccount
+Completed in 43ms (DB: 5) | 302 Found [http://localhost/survey/publish?authenticity_token=39cc82e186c8fad922f6afe799359c95bf1aec64&survey_title=Same+Question&Same+Question=publish]
+
+
+Processing AccountController#myaccount (for 127.0.0.1 at 2010-10-19 17:09:43) [GET]
+  [4;35;1mUser Load (1.4ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'blahblah') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering account/myaccount
+  [4;36;1mSurvey Load (0.8ms)[0m   [0;1mSELECT * FROM "surveys" WHERE ("surveys".user_id = 1) [0m
+Completed in 51ms (View: 37, DB: 1) | 200 OK [http://localhost/account/myaccount]
+
+
+Processing SurveyController#list (for 127.0.0.1 at 2010-10-19 17:10:02) [GET]
+  [4;35;1mSurvey Load (1.6ms)[0m   [0mSELECT * FROM "surveys" WHERE (published = 1) [0m
+Rendering template within layouts/application
+Rendering survey/list
+  [4;36;1mUser Load (1.3ms)[0m   [0;1mSELECT * FROM "users" WHERE (id = 1) LIMIT 1[0m
+Completed in 121ms (View: 57, DB: 2) | 200 OK [http://localhost/survey/list]
+
+
+Processing SurveyController#takeviewer (for 127.0.0.1 at 2010-10-19 17:10:03) [GET]
+  Parameters: {"survey_title"=>"Same Question", "Same Question"=>"Take Survey", "authenticity_token"=>"39cc82e186c8fad922f6afe799359c95bf1aec64"}
+  [4;35;1mSurvey Load (1.5ms)[0m   [0mSELECT * FROM "surveys" WHERE (title = 'Same Question') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering survey/takeviewer
+  [4;36;1mQuestion Load (1.8ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".survey_id = 1) [0m
+  [4;35;1mChoice Load (1.4ms)[0m   [0mSELECT * FROM "choices" WHERE ("choices".question_id = 1) [0m
+  [4;36;1mChoice Load (1.2ms)[0m   [0;1mSELECT * FROM "choices" WHERE ("choices".question_id = 2) [0m
+Completed in 138ms (View: 65, DB: 1) | 200 OK [http://localhost/survey/takeviewer?authenticity_token=39cc82e186c8fad922f6afe799359c95bf1aec64&survey_title=Same+Question&Same+Question=Take+Survey]
+
+
+Processing SurveyController#take (for 127.0.0.1 at 2010-10-19 17:10:07) [POST]
+  Parameters: {"authenticity_token"=>"39cc82e186c8fad922f6afe799359c95bf1aec64", "takesurvey"=>"Submit", "This is a question1"=>"1", "This is a question2"=>"5"}
+  [4;35;1mSurvey Load (1.5ms)[0m   [0mSELECT * FROM "surveys" WHERE (title = 'Same Question') LIMIT 1[0m
+  [4;36;1mQuestion Load (0.9ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".survey_id = 1) [0m
+  [4;35;1mQuestion Load (1.0ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions"."id" = 1) [0m
+  [4;36;1mSurvey Load (0.6ms)[0m   [0;1mSELECT * FROM "surveys" WHERE ("surveys"."id" = 1) [0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Exists (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'blahblah' AND "users".id <> 1) LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'blahblah@stupid' AND "users".id <> 1) LIMIT 1[0m
+  [4;36;1mSurvey Exists (0.2ms)[0m   [0;1mSELECT "surveys".id FROM "surveys" WHERE ("surveys"."title" = 'Same Question' AND "surveys".id <> 1) LIMIT 1[0m
+  [4;35;1mAnswer Create (2.5ms)[0m   [0mINSERT INTO "answers" ("question_id", "created_at", "updated_at", "choice_id") VALUES(1, '2010-10-20 00:10:07', '2010-10-20 00:10:07', 1)[0m
+  [4;36;1mUser Exists (0.5ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'blahblah' AND "users".id <> 1) LIMIT 1[0m
+  [4;35;1mUser Exists (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'blahblah@stupid' AND "users".id <> 1) LIMIT 1[0m
+  [4;36;1mSurvey Exists (0.1ms)[0m   [0;1mSELECT "surveys".id FROM "surveys" WHERE ("surveys"."title" = 'Same Question' AND "surveys".id <> 1) LIMIT 1[0m
+  [4;35;1mQuestion Load (0.5ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions"."id" = 2) [0m
+  [4;36;1mSurvey Load (0.3ms)[0m   [0;1mSELECT * FROM "surveys" WHERE ("surveys"."id" = 1) [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'blahblah' AND "users".id <> 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'blahblah@stupid' AND "users".id <> 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT "surveys".id FROM "surveys" WHERE ("surveys"."title" = 'Same Question' AND "surveys".id <> 1) LIMIT 1[0m
+  [4;35;1mAnswer Create (2.1ms)[0m   [0mINSERT INTO "answers" ("question_id", "created_at", "updated_at", "choice_id") VALUES(2, '2010-10-20 00:10:07', '2010-10-20 00:10:07', 5)[0m
+  [4;36;1mUser Exists (0.4ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'blahblah' AND "users".id <> 1) LIMIT 1[0m
+  [4;35;1mUser Exists (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'blahblah@stupid' AND "users".id <> 1) LIMIT 1[0m
+  [4;36;1mSurvey Exists (0.1ms)[0m   [0;1mSELECT "surveys".id FROM "surveys" WHERE ("surveys"."title" = 'Same Question' AND "surveys".id <> 1) LIMIT 1[0m
+Redirected to actionlist
+Completed in 132ms (DB: 13) | 302 Found [http://localhost/survey/take]
+
+
+Processing SurveyController#list (for 127.0.0.1 at 2010-10-19 17:10:07) [GET]
+  [4;35;1mSurvey Load (1.7ms)[0m   [0mSELECT * FROM "surveys" WHERE (published = 1) [0m
+Rendering template within layouts/application
+Rendering survey/list
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE (id = 1) LIMIT 1[0m
+Completed in 52ms (View: 36, DB: 2) | 200 OK [http://localhost/survey/list]
+
+
+Processing AccountController#login (for 127.0.0.1 at 2010-10-19 17:10:09) [GET]
+Redirected to actionmyaccount
+Completed in 4ms (DB: 0) | 302 Found [http://localhost/account/login]
+
+
+Processing AccountController#myaccount (for 127.0.0.1 at 2010-10-19 17:10:09) [GET]
+  [4;35;1mUser Load (1.3ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'blahblah') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering account/myaccount
+  [4;36;1mSurvey Load (0.8ms)[0m   [0;1mSELECT * FROM "surveys" WHERE ("surveys".user_id = 1) [0m
+Completed in 54ms (View: 38, DB: 1) | 200 OK [http://localhost/account/myaccount]
+
+
+Processing SurveyController#view (for 127.0.0.1 at 2010-10-19 17:10:10) [GET]
+  Parameters: {"survey_title"=>"Same Question", "Same Question"=>"view", "authenticity_token"=>"39cc82e186c8fad922f6afe799359c95bf1aec64"}
+  [4;35;1mSurvey Load (1.6ms)[0m   [0mSELECT * FROM "surveys" WHERE (title = 'Same Question') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering survey/view
+  [4;36;1mQuestion Load (1.0ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".survey_id = 1) [0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSELECT count(*) AS count_all FROM "answers" WHERE ("answers".question_id = 1) [0m
+  [4;36;1mChoice Load (1.2ms)[0m   [0;1mSELECT * FROM "choices" WHERE ("choices".question_id = 1) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM "answers" WHERE (choice_id = 1) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "answers" WHERE (choice_id = 2) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "answers" WHERE (choice_id = 3) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "answers" WHERE ("answers".question_id = 2) [0m
+  [4;35;1mChoice Load (0.5ms)[0m   [0mSELECT * FROM "choices" WHERE ("choices".question_id = 2) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "answers" WHERE (choice_id = 4) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "answers" WHERE (choice_id = 5) [0m
+Completed in 88ms (View: 70, DB: 2) | 200 OK [http://localhost/survey/view?authenticity_token=39cc82e186c8fad922f6afe799359c95bf1aec64&survey_title=Same+Question&Same+Question=view]
+
+
+Processing AccountController#login (for 127.0.0.1 at 2010-10-19 17:10:17) [GET]
+Redirected to actionmyaccount
+Completed in 4ms (DB: 0) | 302 Found [http://localhost/account/login]
+
+
+Processing AccountController#myaccount (for 127.0.0.1 at 2010-10-19 17:10:17) [GET]
+  [4;36;1mUser Load (1.3ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = 'blahblah') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering account/myaccount
+  [4;35;1mSurvey Load (0.7ms)[0m   [0mSELECT * FROM "surveys" WHERE ("surveys".user_id = 1) [0m
+Completed in 51ms (View: 38, DB: 1) | 200 OK [http://localhost/account/myaccount]
+
+
+Processing SurveyController#create (for 127.0.0.1 at 2010-10-19 17:10:18) [GET]
+  Parameters: {"createsurvey"=>"Create Survey", "authenticity_token"=>"39cc82e186c8fad922f6afe799359c95bf1aec64"}
+Rendering template within layouts/application
+Rendering survey/create
+Completed in 24ms (View: 20, DB: 0) | 200 OK [http://localhost/survey/create?authenticity_token=39cc82e186c8fad922f6afe799359c95bf1aec64&createsurvey=Create+Survey]
+
+
+Processing SurveyController#validate_survey (for 127.0.0.1 at 2010-10-19 17:10:30) [POST]
+  Parameters: {"CreateSurvey"=>"Create Survey", "authenticity_token"=>"39cc82e186c8fad922f6afe799359c95bf1aec64", "userform"=>{"title"=>"Test div by 0", "published"=>"0", "description"=>"Test div by 0"}}
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = 'blahblah') LIMIT 1[0m
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'blahblah' AND "users".id <> 1) LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'blahblah@stupid' AND "users".id <> 1) LIMIT 1[0m
+  [4;36;1mSurvey Exists (0.3ms)[0m   [0;1mSELECT "surveys".id FROM "surveys" WHERE ("surveys"."title" = 'Test div by 0') LIMIT 1[0m
+  [4;35;1mSurvey Create (4.1ms)[0m   [0mINSERT INTO "surveys" ("created_at", "title", "published", "updated_at", "user_id", "description") VALUES('2010-10-20 00:10:30', 'Test div by 0', 0, '2010-10-20 00:10:30', 1, 'Test div by 0')[0m
+  [4;36;1mUser Exists (0.9ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'blahblah' AND "users".id <> 1) LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'blahblah@stupid' AND "users".id <> 1) LIMIT 1[0m
+  [4;36;1mSurvey Exists (0.3ms)[0m   [0;1mSELECT "surveys".id FROM "surveys" WHERE ("surveys"."title" = 'Test div by 0' AND "surveys".id <> 2) LIMIT 1[0m
+Redirected to actionaddquestion
+Completed in 67ms (DB: 8) | 302 Found [http://localhost/survey/validate_survey]
+
+
+Processing SurveyController#addquestion (for 127.0.0.1 at 2010-10-19 17:10:30) [GET]
+  [4;35;1mSurvey Load (0.8ms)[0m   [0mSELECT * FROM "surveys" WHERE (title = 'Test div by 0') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering survey/addquestion
+  [4;36;1mQuestion Load (0.5ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".survey_id = 2) [0m
+Completed in 50ms (View: 22, DB: 1) | 200 OK [http://localhost/survey/addquestion]
+
+
+Processing SurveyController#addquestion (for 127.0.0.1 at 2010-10-19 17:10:47) [POST]
+  Parameters: {"AddQuestion"=>"Add Question", "choice"=>"testing1\r\ntesting2", "authenticity_token"=>"39cc82e186c8fad922f6afe799359c95bf1aec64", "userform"=>{"description"=>"10/0"}}
+  [4;35;1mSurvey Load (1.2ms)[0m   [0mSELECT * FROM "surveys" WHERE (title = 'Test div by 0') LIMIT 1[0m
+  [4;36;1mSurvey Load (1.0ms)[0m   [0;1mSELECT * FROM "surveys" WHERE ("surveys"."id" = 2) [0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Exists (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'blahblah' AND "users".id <> 1) LIMIT 1[0m
+  [4;35;1mUser Exists (0.4ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'blahblah@stupid' AND "users".id <> 1) LIMIT 1[0m
+  [4;36;1mSurvey Exists (0.2ms)[0m   [0;1mSELECT "surveys".id FROM "surveys" WHERE ("surveys"."title" = 'Test div by 0' AND "surveys".id <> 2) LIMIT 1[0m
+  [4;35;1mQuestion Create (3.0ms)[0m   [0mINSERT INTO "questions" ("created_at", "updated_at", "survey_id", "description") VALUES('2010-10-20 00:10:47', '2010-10-20 00:10:47', 2, '10/0')[0m
+  [4;36;1mUser Exists (0.6ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'blahblah' AND "users".id <> 1) LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'blahblah@stupid' AND "users".id <> 1) LIMIT 1[0m
+  [4;36;1mSurvey Exists (0.1ms)[0m   [0;1mSELECT "surveys".id FROM "surveys" WHERE ("surveys"."title" = 'Test div by 0' AND "surveys".id <> 2) LIMIT 1[0m
+  [4;35;1mQuestion Load (0.9ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions"."id" = 3) [0m
+  [4;36;1mSurvey Load (0.6ms)[0m   [0;1mSELECT * FROM "surveys" WHERE ("surveys"."id" = 2) [0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'blahblah' AND "users".id <> 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'blahblah@stupid' AND "users".id <> 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT "surveys".id FROM "surveys" WHERE ("surveys"."title" = 'Test div by 0' AND "surveys".id <> 2) LIMIT 1[0m
+  [4;35;1mChoice Create (2.6ms)[0m   [0mINSERT INTO "choices" ("question_id", "created_at", "updated_at", "description") VALUES(3, '2010-10-20 00:10:47', '2010-10-20 00:10:47', 'testing1')[0m
+  [4;36;1mUser Exists (0.7ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'blahblah' AND "users".id <> 1) LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'blahblah@stupid' AND "users".id <> 1) LIMIT 1[0m
+  [4;36;1mSurvey Exists (0.1ms)[0m   [0;1mSELECT "surveys".id FROM "surveys" WHERE ("surveys"."title" = 'Test div by 0' AND "surveys".id <> 2) LIMIT 1[0m
+  [4;35;1mQuestion Load (0.6ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions"."id" = 3) [0m
+  [4;36;1mSurvey Load (0.4ms)[0m   [0;1mSELECT * FROM "surveys" WHERE ("surveys"."id" = 2) [0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'blahblah' AND "users".id <> 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'blahblah@stupid' AND "users".id <> 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT "surveys".id FROM "surveys" WHERE ("surveys"."title" = 'Test div by 0' AND "surveys".id <> 2) LIMIT 1[0m
+  [4;35;1mChoice Create (2.3ms)[0m   [0mINSERT INTO "choices" ("question_id", "created_at", "updated_at", "description") VALUES(3, '2010-10-20 00:10:47', '2010-10-20 00:10:47', 'testing2')[0m
+  [4;36;1mUser Exists (0.5ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'blahblah' AND "users".id <> 1) LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'blahblah@stupid' AND "users".id <> 1) LIMIT 1[0m
+  [4;36;1mSurvey Exists (0.2ms)[0m   [0;1mSELECT "surveys".id FROM "surveys" WHERE ("surveys"."title" = 'Test div by 0' AND "surveys".id <> 2) LIMIT 1[0m
+Redirected to actionaddquestion
+Completed in 154ms (DB: 18) | 302 Found [http://localhost/survey/addquestion]
+
+
+Processing SurveyController#addquestion (for 127.0.0.1 at 2010-10-19 17:10:48) [GET]
+  [4;35;1mSurvey Load (0.8ms)[0m   [0mSELECT * FROM "surveys" WHERE (title = 'Test div by 0') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering survey/addquestion
+  [4;36;1mQuestion Load (0.7ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".survey_id = 2) [0m
+  [4;35;1mChoice Load (0.7ms)[0m   [0mSELECT * FROM "choices" WHERE ("choices".question_id = 3) [0m
+Completed in 60ms (View: 35, DB: 1) | 200 OK [http://localhost/survey/addquestion]
+
+
+Processing AccountController#login (for 127.0.0.1 at 2010-10-19 17:10:49) [GET]
+Redirected to actionmyaccount
+Completed in 4ms (DB: 0) | 302 Found [http://localhost/account/login]
+
+
+Processing AccountController#myaccount (for 127.0.0.1 at 2010-10-19 17:10:49) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = 'blahblah') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering account/myaccount
+  [4;35;1mSurvey Load (1.6ms)[0m   [0mSELECT * FROM "surveys" WHERE ("surveys".user_id = 1) [0m
+Completed in 110ms (View: 96, DB: 1) | 200 OK [http://localhost/account/myaccount]
+
+
+Processing SurveyController#view (for 127.0.0.1 at 2010-10-19 17:10:51) [GET]
+  Parameters: {"survey_title"=>"Test div by 0", "authenticity_token"=>"39cc82e186c8fad922f6afe799359c95bf1aec64", "Test div by 0"=>"view"}
+  [4;36;1mSurvey Load (1.4ms)[0m   [0;1mSELECT * FROM "surveys" WHERE (title = 'Test div by 0') LIMIT 1[0m
+Redirected to actionaddquestion
+Completed in 24ms (DB: 1) | 302 Found [http://localhost/survey/view?authenticity_token=39cc82e186c8fad922f6afe799359c95bf1aec64&survey_title=Test+div+by+0&Test+div+by+0=view]
+
+
+Processing SurveyController#addquestion (for 127.0.0.1 at 2010-10-19 17:10:51) [GET]
+  [4;35;1mSurvey Load (0.7ms)[0m   [0mSELECT * FROM "surveys" WHERE (title = 'Test div by 0') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering survey/addquestion
+  [4;36;1mQuestion Load (0.8ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".survey_id = 2) [0m
+  [4;35;1mChoice Load (1.2ms)[0m   [0mSELECT * FROM "choices" WHERE ("choices".question_id = 3) [0m
+Completed in 68ms (View: 39, DB: 1) | 200 OK [http://localhost/survey/addquestion]
+
+
+Processing AccountController#login (for 127.0.0.1 at 2010-10-19 17:10:53) [GET]
+Redirected to actionmyaccount
+Completed in 5ms (DB: 0) | 302 Found [http://localhost/account/login]
+
+
+Processing AccountController#myaccount (for 127.0.0.1 at 2010-10-19 17:10:53) [GET]
+  [4;36;1mUser Load (1.3ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = 'blahblah') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering account/myaccount
+  [4;35;1mSurvey Load (1.1ms)[0m   [0mSELECT * FROM "surveys" WHERE ("surveys".user_id = 1) [0m
+Completed in 57ms (View: 41, DB: 1) | 200 OK [http://localhost/account/myaccount]
+
+
+Processing SurveyController#publish (for 127.0.0.1 at 2010-10-19 17:10:54) [GET]
+  Parameters: {"survey_title"=>"Test div by 0", "authenticity_token"=>"39cc82e186c8fad922f6afe799359c95bf1aec64", "Test div by 0"=>"publish"}
+  [4;36;1mSurvey Load (1.0ms)[0m   [0;1mSELECT * FROM "surveys" WHERE (title = 'Test div by 0') LIMIT 1[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'blahblah' AND "users".id <> 1) LIMIT 1[0m
+  [4;35;1mUser Exists (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'blahblah@stupid' AND "users".id <> 1) LIMIT 1[0m
+  [4;36;1mSurvey Exists (0.1ms)[0m   [0;1mSELECT "surveys".id FROM "surveys" WHERE ("surveys"."title" = 'Test div by 0' AND "surveys".id <> 2) LIMIT 1[0m
+  [4;35;1mSurvey Update (1.2ms)[0m   [0mUPDATE "surveys" SET "updated_at" = '2010-10-20 00:10:54', "published" = 1 WHERE "id" = 2[0m
+Redirected to controlleraccountactionmyaccount
+Completed in 39ms (DB: 3) | 302 Found [http://localhost/survey/publish?authenticity_token=39cc82e186c8fad922f6afe799359c95bf1aec64&survey_title=Test+div+by+0&Test+div+by+0=publish]
+
+
+Processing AccountController#myaccount (for 127.0.0.1 at 2010-10-19 17:10:54) [GET]
+  [4;36;1mUser Load (1.5ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = 'blahblah') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering account/myaccount
+  [4;35;1mSurvey Load (1.2ms)[0m   [0mSELECT * FROM "surveys" WHERE ("surveys".user_id = 1) [0m
+Completed in 114ms (View: 42, DB: 2) | 200 OK [http://localhost/account/myaccount]
+
+
+Processing SurveyController#view (for 127.0.0.1 at 2010-10-19 17:10:56) [GET]
+  Parameters: {"survey_title"=>"Test div by 0", "authenticity_token"=>"39cc82e186c8fad922f6afe799359c95bf1aec64", "Test div by 0"=>"view"}
+  [4;36;1mSurvey Load (1.5ms)[0m   [0;1mSELECT * FROM "surveys" WHERE (title = 'Test div by 0') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering survey/view
+  [4;35;1mQuestion Load (0.8ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".survey_id = 2) [0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSELECT count(*) AS count_all FROM "answers" WHERE ("answers".question_id = 3) [0m
+  [4;35;1mChoice Load (1.1ms)[0m   [0mSELECT * FROM "choices" WHERE ("choices".question_id = 3) [0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT count(*) AS count_all FROM "answers" WHERE (choice_id = 6) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM "answers" WHERE (choice_id = 7) [0m
+Completed in 87ms (View: 65, DB: 2) | 200 OK [http://localhost/survey/view?authenticity_token=39cc82e186c8fad922f6afe799359c95bf1aec64&survey_title=Test+div+by+0&Test+div+by+0=view]
+
+
+Processing AccountController#login (for 127.0.0.1 at 2010-10-19 17:11:02) [GET]
+Redirected to actionmyaccount
+Completed in 4ms (DB: 0) | 302 Found [http://localhost/account/login]
+
+
+Processing AccountController#myaccount (for 127.0.0.1 at 2010-10-19 17:11:02) [GET]
+  [4;36;1mUser Load (1.1ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = 'blahblah') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering account/myaccount
+  [4;35;1mSurvey Load (1.2ms)[0m   [0mSELECT * FROM "surveys" WHERE ("surveys".user_id = 1) [0m
+Completed in 57ms (View: 42, DB: 1) | 200 OK [http://localhost/account/myaccount]
+
+
+Processing SurveyController#list (for 127.0.0.1 at 2010-10-19 17:11:05) [GET]
+  [4;36;1mSurvey Load (1.7ms)[0m   [0;1mSELECT * FROM "surveys" WHERE (published = 1) [0m
+Rendering template within layouts/application
+Rendering survey/list
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE (id = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (id = 1) LIMIT 1[0m
+Completed in 55ms (View: 39, DB: 2) | 200 OK [http://localhost/survey/list]
+
+
+Processing AccountController#login (for 127.0.0.1 at 2010-10-19 17:14:20) [GET]
+Redirected to actionmyaccount
+Completed in 5ms (DB: 0) | 302 Found [http://localhost/account/login]
+
+
+Processing AccountController#login (for 127.0.0.1 at 2010-10-19 17:14:20) [GET]
+Redirected to actionmyaccount
+Completed in 3ms (DB: 0) | 302 Found [http://localhost/account/login]
+
+
+Processing AccountController#myaccount (for 127.0.0.1 at 2010-10-19 17:14:20) [GET]
+  [4;36;1mUser Load (2.3ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = 'blahblah') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering account/myaccount
+  [4;35;1mSurvey Load (0.9ms)[0m   [0mSELECT * FROM "surveys" WHERE ("surveys".user_id = 1) [0m
+Completed in 54ms (View: 39, DB: 2) | 200 OK [http://localhost/account/myaccount]
+
+
+Processing AccountController#logout (for 127.0.0.1 at 2010-10-19 17:14:22) [GET]
+  Parameters: {"authenticity_token"=>"39cc82e186c8fad922f6afe799359c95bf1aec64", "logoutbutton"=>"Logout"}
+Redirected to actionlogin
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/account/logout?authenticity_token=39cc82e186c8fad922f6afe799359c95bf1aec64&logoutbutton=Logout]
+
+
+Processing AccountController#login (for 127.0.0.1 at 2010-10-19 17:14:22) [GET]
+Rendering template within layouts/application
+Rendering account/login
+Completed in 28ms (View: 25, DB: 0) | 200 OK [http://localhost/account/login]

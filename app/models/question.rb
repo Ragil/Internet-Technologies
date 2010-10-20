@@ -3,7 +3,7 @@ class Question < ActiveRecord::Base
 
 	validates_associated :survey, :message => "Not attached to a survey."
 	
-	has_many:questions
+	has_many:answers
 	has_many:choices
 
 	validates_presence_of :description, :message => "Description cannot be empty."

@@ -2,7 +2,7 @@
 	<div class="post">
 		<div class="postheader"><h1><%= @survey.title %> -- NOT PUBLISHED</h1></div>
 		<div class="postcontent">
-			<form action="/survey/addquestion" method="post">'
+			<form action="/survey/addquestion" method="post">
 			<input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" />
 				<table class="form" style="margin: auto; width: 440px; text-align: left; border-width: 10px">
 					<tr>

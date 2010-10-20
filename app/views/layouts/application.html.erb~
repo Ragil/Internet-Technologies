@@ -1,5 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" 
-"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
@@ -12,8 +11,14 @@
 	<div id="header">
 		<ul>
 			<li><%= link_to "Home", :controller => 'home/index' %></li>
+
+			<% if session[:user_id] and session[:user_id] != "ANONYMOUS" %>
+			<li><%= link_to "My Account", :controller => 'account/login' %></li>
+			<%else%>
 			<li><%= link_to "Login", :controller => 'account/login' %></li>
 			<li><%= link_to "Register", :controller => 'account/register' %></li>
+			<% end %>
+			
 			<li><%= link_to "Create Survey", :controller => 'survey/create' %></li>
 			<li><%= link_to "List Survey", :controller => 'survey/list' %></li>
 			<li><%= link_to "Contacts", :controller => 'home/contacts' %></li>
@@ -27,8 +32,14 @@
 				<div class="menucontent">
 					<ul>
 						<li><%= link_to "Home", :controller => 'home/index' %></li>
+
+						<% if session[:user_id] and session[:user_id] != "ANONYMOUS" %>
+						<li><%= link_to "My Account", :controller => 'account/login' %></li>
+						<%else%>
 						<li><%= link_to "Login", :controller => 'account/login' %></li>
 						<li><%= link_to "Register", :controller => 'account/register' %></li>
+						<% end %>
+
 						<li><%= link_to "Create Survey", :controller => 'survey/create' %></li>
 						<li><%= link_to "List Survey", :controller => 'survey/list' %></li>
 						<li><%= link_to "Contacts", :controller => 'home/contacts' %></li>
@@ -45,8 +56,13 @@
 	<div id="footer">
 		<ul>
 			<li><%= link_to "Home", :controller => 'home/index' %></li>
+
+			<% if session[:user_id] and session[:user_id] != "ANONYMOUS" %>
+			<li><%= link_to "My Account", :controller => 'account/login' %></li>
+			<%else%>
 			<li><%= link_to "Login", :controller => 'account/login' %></li>
 			<li><%= link_to "Register", :controller => 'account/register' %></li>
+			<% end %>		
 			<li><%= link_to "Create Survey", :controller => 'survey/create' %></li>
 			<li><%= link_to "List Survey", :controller => 'survey/list' %></li>
 			<li><%= link_to "Contacts", :controller => 'home/contacts' %></li>
